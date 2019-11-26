@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ParcelHero</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+{% include "structure/_header.njk" %}
+
+{% block content %}
+{% endblock %}
+
+{% include "structure/_footer.njk" %}
+{% include "structure/_scripts.njk" %}
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

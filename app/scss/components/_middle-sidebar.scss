@@ -1,0 +1,46 @@
+.middle-account-sidebar{
+   background-color: $gray-9;
+   border-bottom: 4px solid $gray-10;
+   .middle-sidebar-wrap{
+      display: flex;
+      justify-content: flex-start;
+      .btn {
+         color: $white;
+         img{
+            margin-right: 0.4rem;
+         }
+      }
+      .dropdown-menu{
+         >* {
+            color: $dropdown-item;
+         }
+      }
+
+      @include media-breakpoint-down(sm){
+         padding: 0em 1rem;
+
+      }
+   }
+   #responsive-menu-wrap{
+      display: flex;
+
+      @include media-breakpoint-down(md){
+         display: none;
+      }
+   }
+   .account-sidebar-menu{
+      .account-menu-btn{
+         display: none;
+         color: $white;
+         border: none;
+         background-color: transparent;
+         i{
+            margin-right: .5rem;
+            color: inherit;
+         }
+         @include media-breakpoint-down(md){
+            display: block;
+         }
+      }
+   }
+}

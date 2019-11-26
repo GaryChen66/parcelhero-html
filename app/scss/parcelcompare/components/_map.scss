@@ -1,0 +1,317 @@
+.map {
+  width: 100%;
+  height: 350px;
+  background-color: grey;
+  margin-top: 1rem;
+
+  @include media-breakpoint-down(md) {
+    height: 260px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: 230px;
+    margin-top: 20px;
+  }
+}
+
+.map-content {
+  width: 730px;
+
+  .map-carriers-mask{
+    height: 72px;
+    overflow: hidden;
+    width: 100%;
+    margin: 1rem 0px 1.5rem 0px;
+
+    .map-carriers {
+      display: flex;
+      overflow-x: scroll;
+      width: 100%;
+  
+      .map-carriers-block {
+        position: relative;
+        cursor: pointer;
+        padding: 10px;
+        margin-right: 20px;
+        border: solid 1px #c5c3c3;
+        border-radius: 4px;
+  
+        img {
+          width: 107px;
+          height: 47px;
+          user-select: none;
+        }
+  
+        span {
+          display: none;
+        }
+  
+        &.active {
+         @include active-inset();
+        }
+  
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .select-carrier-btn {
+    background-color: transparent;
+    color: $primary;
+    border: solid 2px $primary;
+    display: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+
+    .map-carriers-mask{
+      margin-bottom: 1rem;
+    }
+
+    h5{
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .input-postcode {
+      width: 100%;
+
+      input[type="text"] {
+        width: 100%;
+      }
+    }
+
+    .found-locations-h5 {
+      display: none;
+    }
+  }
+}
+
+.map-marker {
+  background-color: $white;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 6px;
+  border: solid 2px rgba(0, 0, 0, 0.2);
+  @include shadow(0px 4px 4px 0px, 0.1);
+  transition: border $transition ease;
+
+  > div {
+    margin-left: 10px;
+    span {
+      display: block;
+      font-size: 0.75rem;
+
+      &:first-child {
+        font-weight: 500;
+      }
+      &:last-child {
+        color: $primary;
+      }
+    }
+  }
+
+  &:after,
+  &:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    transition: border $transition ease;
+  }
+
+  &:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: $white;
+    border-width: 8px;
+    margin-left: -8px;
+    transform: translateY(-1px);
+  }
+  &:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-width: 11px;
+    margin-left: -11px;
+  }
+
+  img {
+    width: 30px;
+    height: auto;
+  }
+
+  &:hover,
+  &.active {
+    border-color: $primary;
+
+    &:before {
+      border-top-color: $primary;
+    }
+  }
+}
+
+.map-window {
+  width: 100%;
+  height: auto;
+  background-color: $white;
+  padding: 1rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  @include shadow(0px 4px 4px 0px, 0.1);
+
+  h2 {
+    font-size: 1rem;
+    color: $dark;
+    font-weight: 600;
+  }
+
+  .map-window-distance {
+    position: absolute;
+    top: 10px;
+    font-size: 0.75rem;
+    color: $darker-gray;
+    background-color: $white;
+    width: 200px;
+    padding-bottom: 10px;
+  }
+
+  .map-window-adress {
+    font-size: 0.875rem;
+    color: $darker-gray;
+    max-width: 200px;
+  }
+
+  .map-window-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: opacity $transition ease;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    img {
+      display: block;
+      width: 12px;
+      height: 12px;
+    }
+  }
+  .map-window-content {
+    padding-top: 1rem;
+    overflow-y: auto;
+  }
+  .map-window-adress {
+    margin-bottom: 0.5rem;
+  }
+  .map-window-status {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0.5rem 0;
+
+    > div {
+      &:first-child {
+        width: 30px;
+
+        img {
+          margin-top: 2px;
+          width: 16px;
+        }
+      }
+      &:last-child {
+        width: calc(100% - 30px);
+
+        span {
+          display: block;
+          font-size: 0.875rem;
+
+          &:first-child {
+            color: $darker-gray;
+            font-weight: 500;
+          }
+
+          &:last-child {
+            color: $primary;
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  .map-window-printer {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0.5rem 0;
+
+    > div {
+      &:first-child {
+        width: 30px;
+
+        img {
+          margin-top: 2px;
+          width: 20px;
+        }
+      }
+      &:last-child {
+        width: calc(100% - 30px);
+
+        span {
+          display: block;
+          font-size: 0.875rem;
+          color: $darker-gray;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .map-window-work {
+    display: flex;
+    width: 100%;
+    font-size: 0.75rem;
+    color: $darker-gray;
+
+    > div {
+      &:first-child {
+        width: 30%;
+      }
+      &:last-child {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.map .map-window {
+  position: absolute;
+  left: 10px;
+  top: 10px !important;
+  width: 300px;
+  height: calc(100% - 20px);
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}

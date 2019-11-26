@@ -1,0 +1,15 @@
+.home-content {
+  overflow-x: hidden; }
+  .home-content .card {
+    border: solid 1px transparent; }
+    .home-content .card .card-body .list-group {
+      flex-direction: row; }
+      .home-content .card .card-body .list-group-item {
+        border: solid 1px transparent;
+        display: block; }
+        .home-content .card .card-body .list-group-item img {
+          float: left;
+          height: 60px; }
+        .home-content .card .card-body .list-group-item .text-gray-darker {
+          margin-top: 0.8em;
+          text-align: center; }

@@ -1,0 +1,211 @@
+//COLORS
+
+$white: #ffffff;
+$black: #000000;
+$background-color: $white;
+
+$primary:        #347DC0;
+$primary-adv:    #1e77eb;
+$primary-hover:  #99cbec;
+$secondary:      #2EDBA2;
+$secondary-hover:#24a477;
+$success:        #398f14;
+$success-adv:    #0ec5b9;
+$info:           #5D7E99;
+$warning:        #ffc107;
+$danger:         #ff6057;
+$light:          #f0f6fb;
+$light-hover:    #5dafe4;
+$dark:           #333333;
+$deep:           #302E2F;
+$dark-gray:      #999999;
+$darker-gray:    #666666;
+$gray:           #d7d7d7;
+$gray-light:     #9eb2c2;
+$blue-dark:      #34495e;
+$cover:          #f5f7fb;
+$input-cover:    #eeeeee;
+$input-border:   #dfdddd;
+$dark-blue:      #04568c;
+$blue-title:     #277fbf;
+$dropdown-item:  #647193;
+$label-form:     #626D80;
+$more-filters:   #b7becc;
+$select-btn:     #ced4da;
+$active-link-bar:#08A2D5;
+$checkbox-hover: rgba(46, 196, 185, 0.176470588235294);
+$label-hover:    #4f91c9;
+$label-hover-bg: #eaf0f8;
+$active-link-bar:#08A2D5;
+
+$blue-adv:       #3f88d6;
+$blue-cover:     #459ff5;
+$blue-cover-2:   #3b80ce;
+
+
+$green-light:    #2ab3a7;
+$green-adv:      #44B0BD;
+$success-adv:    #3db4ab;
+
+
+$orange:         #fa633c;
+
+// ADDITIONAL COLORS
+
+$blue-light:     #4fb1e3;
+$blue-light-2:   #207dbb;
+$blue-light-3:   #4492c6;
+$blue-light-4:   #63b1e5;
+$gray-2:         #898989;
+$gray-3:         #b9cfde;
+$gray-4:         #c3c5c7;
+$gray-5:         #f1f3f9;
+$gray-6:         #f2f2f2;
+$gray-7:         #f8f8f8;
+$gray-8:         #e6e5e5;
+$gray-9:         #677787;
+$gray-10:        #37434f;
+$gray-11:        #616d80;
+$gray-12:        #c3c3c3;
+$gray-13:        #cccccc;
+$green-active:   #388e3c;
+$primary-spec:   #199ED8;
+
+$blue-btn:       $primary-spec;
+
+$theme-colors: ();
+
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    "filter":     $primary,
+    "gray":       $gray,
+    "dblue":      $dark-blue,
+    "blue-adv":   $blue-adv,
+    "blue-cover": $blue-cover,
+    "orange":     $orange,
+    "neutral":    $gray-6,
+    "gray-darker":$darker-gray,
+    "success-adv": $success-adv,
+    "primary-spec": $primary-spec
+
+  ),
+  $theme-colors
+);
+
+// GLOBAL
+
+$font-family-base:'Roboto', sans-serif;
+
+$body-bg:          $white;
+$body-color:       $dark;
+
+$font-size-base:   1rem;
+
+$yiq-contrasted-threshold:  200;
+
+$nav-height: 6.7rem;
+$nav-height-2: 8rem;
+
+$spacer-default:  2rem;
+
+$transition: 300ms;
+
+// GRID
+
+$grid-gutter-width:           30px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+// LINKS
+
+$link-color:                  $primary;
+$link-decoration:             none;
+$link-hover-color:            adjust-color($link-color, 20%);
+$link-hover-decoration:       none;
+
+$nav-tabs-border-color:             transparent;
+$nav-tabs-border-width:             0;
+$nav-tabs-border-radius:            0;
+$nav-tabs-link-hover-border-color:  transparent;
+$nav-tabs-link-active-color:        inherit;
+$nav-tabs-link-active-bg:           transparent;
+$nav-tabs-link-active-border-color: transparent;
+
+// HEADINGS
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 2.4;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+// INPUTS
+
+$input-btn-padding-y:         .625rem;
+$input-btn-padding-x:         0.75rem;
+
+$input-btn-focus-box-shadow:  none;
+
+$input-btn-padding-y-sm:      .3rem;
+$input-btn-padding-x-sm:      0.75rem;
+
+$input-btn-padding-y-lg:      .4rem;
+$input-btn-padding-x-lg:      0.75rem;
+
+$btn-padding-y:               .625rem;
+$btn-padding-x:               1.5625rem;
+
+$btn-padding-y-sm:            .3rem;
+$btn-padding-x-sm:            0.8rem;
+
+$btn-padding-y-lg:            .4rem;
+$btn-padding-x-lg:            1rem;
+
+$border-color-darker:         $gray;
+
+// BUTTONS
+
+$btn-box-shadow:              none;
+$btn-active-box-shadow:       none;
+
+// CHECKBOX
+
+$checkbox-checked-color: $secondary;
+$checkbox-border-color: rgba($black, 0.6);
+$checkbox-border-color-disabled: rgba($black, 0.25);
+$checkbox-checked-color-disabled: rgba($black, 0.25);
+
+$checkbox-margin: 0 0;
+$checkbox-size: 1.7em;
+$checkbox-padding: .25em;
+$checkbox-border-width: 2px;
+$checkbox-border-radius: 0.125em;
+$checkmark-width: 0.15em;
+$checkmark-color: $white;
+$checkbox-label-padding: .75em;
+
+$tooltip-bg:                $blue-cover;
+

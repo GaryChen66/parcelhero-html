@@ -1,0 +1,67 @@
+.ebilling-content{
+  .add-card-btn{
+    right: 15px;
+    position: absolute;
+
+    @include media-breakpoint-down(sm){
+      position: static;
+
+    }
+
+  }
+  .delete-payment-btn{
+    position: absolute;
+    right: 0;
+
+    top: -15px;
+    @include media-breakpoint-down(sm){
+      display: block;
+      position: static;
+
+    }
+
+  }
+  .wallet-amount-widget{
+    .card-body{
+      color: #FFF;
+      background: linear-gradient(90deg, rgba(100, 179, 244, 1) 0%,
+              rgba(100, 179, 244, 1) 0%,
+              rgba(77, 216, 203, 1) 100%,
+              rgba(77, 216, 203, 1) 100%);
+      span{
+        color: #FFF;
+
+      }
+
+    }
+
+  }
+  .settings-card{
+    label{
+      color: $label-form;
+      font-weight: 500;
+
+    }
+    input{
+      margin-top: 3px;
+
+    }
+
+  }
+  .select-date-btn{
+    color: $label-form;
+    border-radius: 8px;
+
+    border: solid 1px $gray-3;
+    text-transform: capitalize;
+
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(md){
+      margin: 15px 0px 0px 15px;
+
+    }
+
+  }
+
+}

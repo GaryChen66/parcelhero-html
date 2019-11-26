@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="13px" viewBox="0 0 24 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Buttons-Copy" transform="translate(-89.000000, -906.000000)" fill="#5D7E99" fill-rule="nonzero">
+            <g id="Chevron-down" transform="translate(89.000000, 906.000000)">
+                <path d="M12,8.65038565 L21.333665,0.15689053 C21.5640597,-0.0564628161 21.9444789,-0.0513829746 22.1802316,0.167050213 L23.8197847,1.68592285 C24.0555375,1.90435603 24.0608955,2.25994494 23.8305008,2.47329829 L12.4339993,12.8463348 C12.316123,12.9580913 12.1553825,13.0088897 12,12.99873 C11.8392595,13.0038099 11.683877,12.9530115 11.5660007,12.8463348 L0.169499237,2.47329829 C-0.0608954793,2.25994494 -0.0555374627,1.90435603 0.18021527,1.68592285 L1.81976836,0.167050213 C2.0555211,-0.0513829746 2.43594028,-0.0564628161 2.666335,0.15689053 L12,8.65038565 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,404 @@
+.settings-content{
+  h5{
+    font-weight: 300;
+    font-size: 20px;
+
+  }
+  .border-pseudo{
+    position: relative;
+
+    &:after{
+      content: '';
+      position: absolute;
+
+      width: 100%;
+      height: 1px;
+
+      bottom: -6px;
+      left: 0;
+
+      background-color: $gray-8;
+
+    }
+
+  }
+
+  .settings-table{
+    font-size: 16px;
+    color: $label-form;
+    thead{
+      th{
+        color: $label-form;
+        font-size: 1em;
+
+      }
+
+    }
+    tbody{
+      tr {
+        > *:first-child {
+          @include media-breakpoint-down(sm) {
+            padding-right: 0.5em;
+
+          }
+
+        }
+
+      }
+      td, th{
+        color: $label-form;
+
+        font-size: 1em;
+
+      }
+
+    }
+    .past-desc-input{
+      padding: 0.3em 0.5em;
+      width: 50%;
+      background: $gray-6;
+
+      font-size: 1em;
+      @include media-breakpoint-down(sm){
+        width: 100% !important;
+
+      }
+
+    }
+    .save-cancel-wrap{
+      display: none;
+      >*{
+        font-size: 0.875em;
+      }
+      >*:first-child{
+        background-color: rgba(22, 155, 213, 1);
+        padding: 0.25em 1.5em;
+
+      }
+      >*:last-child{
+        color: $gray-2;
+        font-weight: 300;
+
+        text-transform: uppercase;
+
+      }
+
+    }
+
+  }
+
+}
+
+.settings-form{
+  .radio-group-wrap{
+    .radio-group{
+      padding: 8px 16px 8px 12px;
+      margin-right: 10px;
+
+      border: solid 1px $gray-4;
+      border-radius: 6px;
+
+      cursor: pointer;
+      input{
+        margin: 0px 15px;
+
+      }
+      &:focus{
+        >.element-group{
+          color: #338E3C;
+
+        }
+
+      }
+
+    }
+
+  }
+  #default-weight-fieldset{
+    input[type='text']{
+      max-width: 75px;
+
+    }
+
+  }
+  .element-active{
+    .element-style-type-radio{
+      border-color: #5e9592 !important;
+      &:after{
+        display: none;
+
+      }
+
+    }
+    .element-style-wrap{
+      background-color: #388e3c !important;
+
+    }
+
+  }
+  .element-static-label{
+    color: $dark;
+    font-weight: 400;
+
+  }
+  span{
+    color: $label-form;
+    font-weight: 500;
+    font-size: 1em;
+
+  }
+  .disabled{
+    color: $gray-6;
+    border-color: $gray-6;
+
+  }
+
+}
+
+.settings-form{
+  span{
+    font-weight: 400;
+    padding-right: 0.4em;
+
+    font-size: 1em;
+
+  }
+  .element-group{
+    font-size: 0.875em;
+
+  }
+  .table-actions{
+    a{
+      color: $label-form;
+      text-decoration: none;
+
+      position: relative;
+      &:after{
+        content: '';
+        width: 0.5px;
+
+        background-color: $label-form;
+        height: 100%;
+        position: absolute;
+
+        right: -12px;
+        top:0;
+
+      }
+
+    }
+
+  }
+  .edit-settings-wrap{
+    label{
+      color: $label-form;
+      font-weight: 500;
+
+    }
+    input{
+      margin-top: 3px;
+
+    }
+
+
+  }
+  .settings-hidden{
+    display: none;
+
+  }
+  .edit-settings-btn{
+    border: none;
+    background-color: transparent;
+
+    display: flex;
+    align-self: baseline;
+
+    color: $active-link-bar;
+
+  }
+  .contact-details-input{
+    width: 26%;
+    @include media-breakpoint-down(md){
+      width: 50%;
+    }
+    @include media-breakpoint-down(sm){
+      width: 66.6%;
+    }
+
+  }
+
+}
+
+.user-settings-wrap{
+  .table{
+    color: $label-form !important;
+    .dropdown{
+      &-toggle{
+        border-radius: 60px;
+        padding: 4px 7px;
+        margin-left: 15px;
+        &:after{
+          display: none !important;
+
+        }
+        &:hover{
+          background-color: rgba(219,232,249,1);
+
+        }
+        i{
+          margin-right: 0px !important;
+
+        }
+
+      }
+      &-menu{
+        i{
+          width: 20px;
+
+        }
+
+      }
+
+    }
+    .status-btn{
+      width: 135px;
+      padding: 5px 0px;
+      font-size: 0.75em;
+
+      border-radius: 5px;
+      border: none;
+
+      background-color: transparent;
+      color: $label-form;
+      i{
+        color: #FFF;
+
+      }
+
+    }
+    button{
+     font-weight: 200;
+
+    }
+    .close-description-btn{
+      color: $blue-adv;
+
+    }
+    .primary-status-btn{
+      background-color: #FFCC33;
+
+    }
+    .active-status-btn{
+      background-color: #339966;
+      color: #FFF;
+
+    }
+    .invitation-status-btn{
+      background-color: #CCCCCC;
+
+    }
+
+  }
+  input{
+    border-radius: 0px !important;
+
+  }
+  th{
+    border-top: none;
+
+  }
+
+}
+
+
+.alphabet-container{
+  background-color: $gray-6 !important;
+  position: relative;
+  .alphabet-paragraph{
+    display: flex;
+    align-items: center;
+
+    text-transform: uppercase;
+    span{
+      color: #d7d7d7;
+      margin-right: 7px;
+      strong{
+        color: $label-form;
+
+      }
+
+    }
+    @include media-breakpoint-down(md){
+      display: block !important;
+
+    }
+
+  }
+  &:after{
+    content: '';
+    position: absolute;
+
+    width: 96%;
+    height: 0.5px;
+
+    top: 0px;
+    left: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+    background-color: $gray-4;
+
+  }
+
+}
+
+.save-cancel-wrap{
+  display: none;
+
+}
+
+.table-wrap{
+  @include media-breakpoint-down(md){
+    width: 800px;
+
+  }
+
+}
+
+.no-cost-centre{
+  text-align: center;
+  h4{
+    font-weight: 300;
+    font-size: 1.5em;
+
+  }
+  p{
+    font-weight: 300;
+    font-size: 1em;
+
+  }
+
+}
+
+.settings-table-data{
+  .dropdown-item{
+    font-weight: 200;
+    font-size: 0.875em;
+
+    margin: 0.1em 0em 0.15em 0em;
+    color: $label-form;
+    &:nth-child(2){
+      i{
+        margin-left: 3.5px;
+
+      }
+
+    }
+
+  }
+
+}
+

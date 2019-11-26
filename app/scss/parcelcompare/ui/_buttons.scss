@@ -1,0 +1,503 @@
+.btn{
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+
+  &.strong {
+    font-weight: 600;
+    border-width: 2px;
+  }
+
+  &.not-rounded {
+    border-radius: 0;
+  }
+
+  &.btn-12{
+    font-size: 1.2rem;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1rem;
+    }
+  }
+
+  &:focus, .btn:active:focus, &:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  &.btn-with-icon{
+    display: flex;
+    align-items: center;
+    padding: 0.5625rem 0.875rem;
+    text-align: left;
+
+    img {
+      width: 24px;
+      margin-right: 10px;
+    }
+  }
+  i{
+    margin-right: 5px;
+    font-size: 0.8rem;
+  }
+
+  &.btn-large {
+    padding-left: $btn-padding-x*2;
+    padding-right: $btn-padding-x*2;
+  }
+
+  &.reduce-padding{
+    padding-left: $btn-padding-x*0.8;
+    padding-right: $btn-padding-x*0.8;
+  }
+
+  @include media-breakpoint-down(md) {
+    line-height: $btn-line-height*0.8;
+
+    &.btn-large {
+      padding-left: $btn-padding-x*1.4;
+      padding-right: $btn-padding-x*1.4;
+    }
+
+    &.btn-with-icon{
+      img {
+        width: 30px;
+      }
+    }
+  }
+
+  &[disabled]{
+    border-color: $gray-4;
+    background-color: $gray-4;
+    color: $dark;
+    pointer-events: none;
+
+    &:hover{
+      border-color: $gray-4;
+      background-color: $gray-4;
+      color: $dark;
+    }
+  }
+
+  &.save-btn {
+    font-size: .9rem;
+    color: $blue-btn;
+    font-weight: 500;
+    white-space: nowrap;
+    border: 2px solid $blue-btn;
+    padding-left: .8rem;
+    padding-right: .8rem;
+    border-radius: 25px;
+
+    &:hover {
+      background: rgba($blue-btn, 0.05);
+    }
+  }
+
+  &.btn-success-neutral {
+    white-space: nowrap;
+    color: $success;
+  }
+
+  &.save-btn-disabled {
+    font-size: .9rem;
+    color: $green-active;
+    white-space: nowrap;
+    background: transparent;
+    padding-right: 0;
+    opacity: 1;
+    border: none;
+    background: url(../img/icons/checked-ico.png) 0 50% no-repeat;
+  }
+
+  &.btn-block-blue {
+    width: 100%;
+    background-color: $white;
+    border: 1px solid $blue-btn;
+    border-radius: 0;
+    text-align: left;
+    color: $blue-btn;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    transition: all $transition ease;
+
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+    }
+
+    i {
+      font-size: 1.4rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &.btn-additional {
+    background-color: $orange;
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+
+.btn-secondary{
+  text-transform: uppercase;
+  &:hover{
+    background-color: $secondary-hover;
+    border-color: $secondary-hover;
+  }
+
+  &[disabled]{
+    border-color: $gray-4;
+    background-color: transparent;
+    color: $gray-4;
+
+    &:hover{
+      border-color: $gray-4;
+      background-color: transparent;
+      color: $gray-4;
+    }
+  }
+}
+
+.btn-outline-secondary{
+  text-transform: uppercase;
+  
+  &:hover{
+    background-color: $secondary-hover;
+    border-color: $secondary-hover;
+  }
+}
+
+.btn-outline-gray {
+  &:hover{
+    background-color: $light;
+  }
+
+  &.active{
+    background-color: transparent;
+    border-color: $primary;
+  }
+
+  &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled).active, .show>&.dropdown-toggle{
+    background-color: transparent;
+    border-color: $primary;
+
+    @include active();
+  }
+}
+
+.btn-md{
+  font-size: $btn-font-size * 0.875;
+  padding: 0.66rem $btn-padding-x*0.8;
+
+  @include media-breakpoint-down(md) {
+    padding: 0.5rem $btn-padding-x-sm*0.8;
+  }
+}
+
+.btn-xs {
+  padding: 1px 5px;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  border-radius: $btn-border-radius/2;
+}
+
+.btn-outline-filter {
+  padding: 1rem 1.1rem;
+
+  span {
+    &:first-child{
+      font-size: 1.25rem;
+      line-height: 1rem;
+      color: $primary;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    &:last-child{
+      font-size: 0.875rem;
+      display: block;
+      line-height: 0.875rem;
+      color: $dark-gray;
+    }
+  }
+  &:hover {
+    background-color: $light;
+    color: $primary;
+
+    span {
+      &:first-child{
+        color: $primary;
+      }
+    }
+  }
+
+  &.active, &:active {
+    background-color: $primary;
+
+    span {
+      color: $white;
+
+      &:first-child{
+        color: $white;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding: 0.8rem 0.8rem;
+
+    span {
+      &:first-child{
+        font-size: 1rem;
+        line-height: 0.8rem;
+        margin-bottom: 0.25rem;
+      }
+  
+      &:last-child{
+        font-size: 0.7rem;
+        line-height: 0.7rem;
+      }
+    }
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 1;
+  transition: color $transition ease;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.close-choose-btn {
+  @extend .close-btn;
+}
+
+.dark-btn {
+  background-color: $primary;
+}
+
+.btn-close {
+  height: 13px;
+  width: auto !important;
+  margin-right: 0 !important;
+  margin-left: 0.8rem !important;
+  opacity: 0.5;
+  transition: opacity $transition ease;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.btn-blue-adv {
+  text-transform: uppercase;
+}
+
+.btn-orange {
+  border: 2px solid $white;
+  font-weight: 500;
+
+  &:hover{
+    border: 2px solid $white;
+  }
+}
+
+.clear-filters-btn{
+  color: $blue-title;
+
+}
+
+.add-filters-btn{
+  color: #000000;
+  background-color: #ffffff;
+  border: solid 1px #999999;
+  text-transform: uppercase;
+
+  transition: all 0.3s;
+  &:hover{
+    background-color: rgba(219,232,249,1) !important;
+
+  }
+
+}
+
+.btn-gradient-secondary {
+  @include gradientV($green-light, $green-adv);
+  border-radius: 3rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid $green-adv;
+  padding-left: $btn-padding-x*1.4;
+  padding-right: $btn-padding-x*1.4;
+
+  i {
+    font-size: 1rem;
+    margin-left: 1rem !important;
+  }
+
+  &:hover{
+    background: transparent;
+    color: $green-adv;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 1rem;
+  }
+}
+
+.btn-gradient-primary {
+  @include gradientV($light-hover, $primary-adv);
+  border-radius: 3rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: $white;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid $white;
+  padding-left: $btn-padding-x*1.4;
+  padding-right: $btn-padding-x*1.4;
+
+  i {
+    font-size: 1rem;
+    margin-left: 1rem !important;
+  }
+
+  &:hover{
+    background: transparent;
+    border-color: $primary-adv;
+    color:$primary;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 1rem;
+  }
+}
+
+.size-unit-btn{
+  background-color: transparent;
+  color: $dark;
+  border: solid 1px $gray-4;
+  border-radius: 5px;
+
+  padding: 5px 12px;
+  margin: 0px 5px;
+
+}
+
+.blue-outline-light-btn{
+    color: #08A2D5;
+    background-color: transparent;
+
+    border: solid 1px #08A2D5;
+    text-transform: uppercase;
+
+    transition: all 0.1s ease-out;
+    &:hover{
+      background-color: #08A2D5;
+      color: #FFF;
+
+    }
+
+}
+
+.dark-outline-btn{
+  color: $dark;
+  background-color: transparent;
+  font-weight: 300;
+
+  border: solid 1px $dark;
+  text-transform: uppercase;
+
+  transition: all 0.1s ease-out;
+  &:hover{
+    background-color: $dark;
+    color: #FFF;
+  }
+}
+
+.insurance-togler {
+  font-size: 0.9rem;
+  color: $dark;
+  line-height: 1.4;
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  padding-right: 1.3rem;
+  display: flex;
+  align-items: center;
+  transition: color $transition ease;
+
+  &:hover {
+    color: $blue-btn;
+  }
+
+  i {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .arrow {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    transform-origin: center center;
+    transition: transform $transition ease;
+  }
+
+  &[aria-expanded=true] {
+    .arrow {
+      transform: rotate(180deg);
+    }    
+  }
+}
+
+.link-neutral {
+  color: $darker-gray;
+
+  &:hover {
+    color: $darker-gray;
+    text-decoration: underline;
+  }
+}
+
+.link-primary-spec {
+  color: $primary-spec;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link-icon-primary-spec {
+  color: $primary-spec;
+  cursor: pointer;
+  transition: color $transition ease;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &.small-icon {
+    i {
+      font-size: 0.8rem;
+    }
+  }
+
+  i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+}
+

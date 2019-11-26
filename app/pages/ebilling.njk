@@ -1,0 +1,785 @@
+{% extends "structure/_layout.njk" %}
+
+{% block content %}
+
+<div class="settings-content">
+
+    <!-- MIDDLE ACCOUNT SIDEBAR -->
+
+    <section class="middle-account-sidebar">
+        <div class="container">
+            <div class="container-fluid m-0 p-0">
+                <div class="middle-sidebar-wrap">
+                    <div class="account-sidebar-menu">
+                        <button class="account-menu-btn pt-2 pb-2" id="account-menu-btn"><i class="fa fa-bars" aria-hidden="true"></i>Account menu</button>
+                        <div id="responsive-menu-wrap">
+                            <div class="mr-5">
+                                <a class="btn pl-0" href="home.html" aria-expanded="false">
+                                    <?xml version="1.0" encoding="UTF-8"?>
+                                    <svg width="20px" class='mr-1' height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+                                        <title>Path</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Home" transform="translate(-0.576520, -0.239777)" fill="#B4BECC" fill-rule="nonzero" class="svg-menu-active">
+                                                <path d="M10.5765203,0.239777132 C10.5765203,0.239777132 4.39052026,5.57977713 0.933520265,8.47177713 C0.71105584,8.66561356 0.581300316,8.94475149 0.576520265,9.23977713 C0.576520265,9.79206188 1.02423551,10.2397771 1.57652026,10.2397771 L3.57652026,10.2397771 L3.57652026,17.2397771 C3.57652026,17.7920619 4.02423551,18.2397771 4.57652026,18.2397771 L7.57652026,18.2397771 C8.12880501,18.2397771 8.57652026,17.7920619 8.57652026,17.2397771 L8.57652026,13.2397771 L12.5765203,13.2397771 L12.5765203,17.2397771 C12.5765203,17.7920619 13.0242355,18.2397771 13.5765203,18.2397771 L16.5765203,18.2397771 C17.128805,18.2397771 17.5765203,17.7920619 17.5765203,17.2397771 L17.5765203,10.2397771 L19.5765203,10.2397771 C20.128805,10.2397771 20.5765203,9.79206188 20.5765203,9.23977713 C20.5736914,8.9385148 20.4324508,8.65529604 20.1935203,8.47177713 C16.7605203,5.57977713 10.5765203,0.239777132 10.5765203,0.239777132 Z" id="Path"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    Dashboard
+                                </a>
+                            </div>
+                            <div>
+                                <div class="dropdown show">
+                                    <a class="btn dropdown-toggle mt-0 mb-0" href="shipment-settings.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="20px" class="pr-1" height="19px" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+                                            <title>Group 27</title>
+                                            <desc>Created with Sketch.</desc>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="#B7BECC" fill-rule="evenodd">
+                                                <g id="Buttons-Copy" transform="translate(-136.000000, -1027.000000)" fill="#B7BECC" fill-rule="nonzero" class="svg-menu-active">
+                                                    <g id="Group-27" transform="translate(136.000000, 1027.000000)">
+                                                        <path d="M6.09375,7 C7.11227418,7 7.98065188,7.69677733 8.30307008,8.66666667 L8.30307008,8.66666667 L20,8.66666667 L20,10.3333333 L8.30307008,10.3333333 C7.98065187,11.3032227 7.11227418,12 6.09375,12 C5.07522582,12 4.20684813,11.3032227 3.88442992,10.3333333 L3.88442992,10.3333333 L0,10.3333333 L0,8.66666667 L3.88442992,8.66666667 C4.20684813,7.69677733 5.07522582,7 6.09375,7 Z M6.07142857,8.75 C5.6119559,8.75 5.23809524,9.1425537 5.23809524,9.625 C5.23809524,10.1074463 5.6119559,10.5 6.07142857,10.5 C6.53090124,10.5 6.9047619,10.1074463 6.9047619,9.625 C6.9047619,9.1425537 6.53090124,8.75 6.07142857,8.75 Z" id="Combined-Shape"></path>
+                                                        <path d="M14.375,0 C15.3935242,0 16.2619019,0.696777333 16.5843201,1.66666667 L16.5843201,1.66666667 L20,1.66666667 L20,3.33333333 L16.5843201,3.33333333 C16.2619019,4.30322267 15.3935242,5 14.375,5 C13.3564758,5 12.4880981,4.30322267 12.1656799,3.33333333 L12.1656799,3.33333333 L0,3.33333333 L0,1.66666667 L12.1656799,1.66666667 C12.4880981,0.696777333 13.3564758,0 14.375,0 Z M14.4047619,1.5 C13.9452892,1.5 13.5714286,1.8925537 13.5714286,2.375 C13.5714286,2.8574463 13.9452892,3.25 14.4047619,3.25 C14.8642346,3.25 15.2380952,2.8574463 15.2380952,2.375 C15.2380952,1.8925537 14.8642346,1.5 14.4047619,1.5 Z" id="Combined-Shape"></path>
+                                                        <path d="M12.890625,14 C13.9091492,14 14.7775269,14.6967773 15.0999451,15.6666667 L15.0999451,15.6666667 L20,15.6666667 L20,17.3333333 L15.0999451,17.3333333 C14.7775269,18.3032227 13.9091492,19 12.890625,19 C11.8721008,19 11.0037231,18.3032227 10.6813049,17.3333333 L10.6813049,17.3333333 L0,17.3333333 L0,15.6666667 L10.6813049,15.6666667 C11.0037231,14.6967773 11.8721008,14 12.890625,14 Z M12.9761905,15.75 C12.5167178,15.75 12.1428571,16.1425537 12.1428571,16.625 C12.1428571,17.1074463 12.5167178,17.5 12.9761905,17.5 C13.4356631,17.5 13.8095238,17.1074463 13.8095238,16.625 C13.8095238,16.1425537 13.4356631,15.75 12.9761905,15.75 Z" id="Combined-Shape"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        Shipment settings
+                                    </a>
+
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="shipment-settings.html">Descriptions</a>
+                                        <a class="dropdown-item" href="shipment-settings.html">Packaging</a>
+                                        <a class="dropdown-item" href="shipment-settings.html">Default settings</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdown show">
+                                    <a class="btn dropdown-toggle" href="customs.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="16px" height="20px" class='mr-1' viewBox="0 0 16 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+                                            <title>document</title>
+                                            <desc>Created with Sketch.</desc>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Buttons-Copy" transform="translate(-240.000000, -1065.000000)" fill="#B4BECC" fill-rule="nonzero" class="svg-menu-active">
+                                                    <g id="document" transform="translate(240.000000, 1065.000000)">
+                                                        <path d="M15.36,6.93571429 L8.93818182,0.628571429 C8.52940405,0.226592893 7.97482284,0.000500148685 7.39636364,0 L2.18181818,0 C0.976833273,0 0,0.959389822 0,2.14285714 L0,17.8571429 C0,19.0406102 0.976833273,20 2.18181818,20 L13.8181818,20 C15.0231667,20 16,19.0406102 16,17.8571429 L16,8.45 C15.9994908,7.88187043 15.7692872,7.33719245 15.36,6.93571429 Z M13.52,7.14285714 L9.45454545,7.14285714 C9.05288382,7.14285714 8.72727273,6.82306054 8.72727273,6.42857143 L8.72727273,2.43571429 L13.52,7.14285714 Z M14.5454545,17.8571429 C14.5454545,18.251632 14.2198435,18.5714286 13.8181818,18.5714286 L2.18181818,18.5714286 C1.78015655,18.5714286 1.45454545,18.251632 1.45454545,17.8571429 L1.45454545,2.14285714 C1.45454545,1.74836804 1.78015655,1.42857143 2.18181818,1.42857143 L7.27272727,1.42857143 L7.27272727,6.42857143 C7.27272727,7.61203875 8.24956055,8.57142857 9.45454545,8.57142857 L14.5454545,8.57142857 L14.5454545,17.8571429 Z" id="Shape"></path>
+                                                        <path d="M12.2857143,12.8 L3.71428571,12.8 C3.31979661,12.8 3,13.1134007 3,13.5 C3,13.8865993 3.31979661,14.2 3.71428571,14.2 L12.2857143,14.2 C12.6802034,14.2 13,13.8865993 13,13.5 C13,13.1134007 12.6802034,12.8 12.2857143,12.8 Z M3,10.7 C3,11.0865993 3.31979661,11.4 3.71428571,11.4 L12.2857143,11.4 C12.6802034,11.4 13,11.0865993 13,10.7 C13,10.3134007 12.6802034,10 12.2857143,10 L3.71428571,10 C3.31979661,10 3,10.3134007 3,10.7 Z M8,15.6 L3.71428571,15.6 C3.31979661,15.6 3,15.9134007 3,16.3 C3,16.6865993 3.31979661,17 3.71428571,17 L8,17 C8.39448911,17 8.71428571,16.6865993 8.71428571,16.3 C8.71428571,15.9134007 8.39448911,15.6 8,15.6 Z" id="Shape"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        Customs
+                                    </a>
+
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="customs.html">Products</a>
+                                        <a class="dropdown-item" href="customs.html">Reasons for export</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdown show">
+                                    <a class="btn dropdown-toggle active-link-bar" href="ebilling.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="20px" height="20px" class='mr-1' viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+                                            <title>Shape</title>
+                                            <desc>Created with Sketch.</desc>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Buttons-Copy" transform="translate(-313.000000, -1029.000000)" fill="#B4BECC" fill-rule="nonzero" class="svg-menu-active">
+                                                    <path d="M324.000014,1043.00119 L318.000014,1043.00119 C317.447729,1043.00119 317.000014,1043.44882 317.000014,1044.00099 C317.000014,1044.55317 317.447729,1045.00079 318.000014,1045.00079 L324.000014,1045.00079 C324.552296,1045.00079 325.000014,1044.55317 325.000014,1044.00099 C325.000014,1043.44882 324.552296,1043.00119 324.000014,1043.00119 Z M320.000013,1037.00238 L322.000013,1037.00238 C322.552297,1037.00238 323.000013,1036.55476 323.000013,1036.00258 C323.000013,1035.45041 322.552297,1035.00278 322.000013,1035.00278 L320.000013,1035.00278 C319.447728,1035.00278 319.000013,1035.45041 319.000013,1036.00258 C319.000013,1036.55476 319.447728,1037.00238 320.000013,1037.00238 Z M332.000008,1039.00199 L329.000008,1039.00199 L329.000008,1030.00378 C329.001433,1029.64516 328.810644,1029.31325 328.500008,1029.13395 C328.190609,1028.95535 327.809411,1028.95535 327.500008,1029.13395 L324.500008,1030.85361 L321.500008,1029.13395 C321.190611,1028.95535 320.809414,1028.95535 320.500008,1029.13395 L317.500008,1030.85361 L314.500008,1029.13395 C314.190614,1028.95535 313.809417,1028.95535 313.500008,1029.13395 C313.189381,1029.31325 312.998592,1029.64516 313.000008,1030.00378 L313.000008,1046.0006 C313.000008,1047.65712 314.343161,1049 316.000008,1049 L330.000008,1049 C331.656863,1049 333.000008,1047.65712 333.000008,1046.0006 L333.000008,1040.00179 C333.000008,1039.44961 332.552293,1039.00199 332.000008,1039.00199 Z M316.000015,1047.0004 C315.44773,1047.0004 315.000015,1046.55277 315.000015,1046.0006 L315.000015,1031.73343 L317.000015,1032.8732 C317.31327,1033.03679 317.686758,1033.03679 318.000015,1032.8732 L321.000015,1031.15355 L324.000015,1032.8732 C324.313267,1033.03679 324.686756,1033.03679 325.000015,1032.8732 L327.000015,1031.73343 L327.000015,1046.0006 C327.002715,1046.34167 327.063588,1046.67979 327.18001,1047.0004 L316.000015,1047.0004 Z M331.000009,1046.0006 C331.000009,1046.55277 330.552294,1047.0004 330.000009,1047.0004 C329.447725,1047.0004 329.000009,1046.55277 329.000009,1046.0006 L329.000009,1041.00159 L331.000009,1041.00159 L331.000009,1046.0006 Z M324.000014,1039.00199 L318.000014,1039.00199 C317.447729,1039.00199 317.000014,1039.44961 317.000014,1040.00179 C317.000014,1040.55396 317.447729,1041.00159 318.000014,1041.00159 L324.000014,1041.00159 C324.552296,1041.00159 325.000014,1040.55396 325.000014,1040.00179 C325.000014,1039.44961 324.552296,1039.00199 324.000014,1039.00199 Z" id="Shape"></path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        eBilling
+                                    </a>
+
+                                    <div class="dropdown-menu pr-0 pl-0">
+                                        <a class="dropdown-item" href="ebilling.html">My cards</a>
+                                        <a class="dropdown-item" href="ebilling.html">Prepay account</a>
+                                        <a class="dropdown-item" href="ebilling.html">Transactions</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="dropdown show">
+                                    <a class="btn dropdown-toggle" href="account-settings.html" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <?xml version="1.0" encoding="UTF-8"?>
+                                        <svg width="20px" height="20px" class='mr-1' viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+                                            <title>Group 21</title>
+                                            <desc>Created with Sketch.</desc>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="Buttons-Copy" transform="translate(-87.000000, -275.000000)">
+                                                    <g id="Group-21" transform="translate(87.000000, 275.000000)">
+                                                        <circle id="Oval" fill="none" cx="12" cy="12" r="10"></circle>
+                                                        <g id="user-(1)" fill="#B7BECC" fill-rule="nonzero" class="svg-menu-active">
+                                                            <path d="M11.9998,0 C5.37256954,0 0,5.37269373 0,11.99988 C0,18.6269063 5.37256954,24 11.9998,24 C18.6270305,24 24,18.6269063 24,11.99988 C24,5.37253373 18.6270305,0 11.9998,0 Z M12.0363606,17.6612166 L12.0363606,17.6610566 L11.9630794,17.6610566 L6.83723395,17.6610566 C6.83723395,13.9125391 10.1294488,13.9134191 10.860021,12.9332493 L10.9436224,12.4862849 C9.91720529,11.9661197 9.19263321,10.7120271 9.19263321,9.24529245 C9.19263321,7.31295313 10.4496142,5.74621746 11.9998,5.74621746 C13.5499858,5.74621746 14.8069668,7.31295313 14.8069668,9.24529245 C14.8069668,10.699547 14.0952749,11.9457995 13.082538,12.4742047 L13.1777396,12.9821298 C13.979273,13.9147791 17.161966,13.9755798 17.161966,17.6612166 L12.0363606,17.6612166 L12.0363606,17.6612166 Z" id="Shape"></path>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        Account settings
+                                    </a>
+
+                                    <div class="dropdown-menu ">
+                                        <a class="dropdown-item" href="account-settings.html">My details</a>
+                                        <a class="dropdown-item" href="account-settings.html">Users</a>
+                                        <a class="dropdown-item" href="account-settings.html">Address block</a>
+                                        <a class="dropdown-item" href="account-settings.html">Cost centre</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-BILLING CONTENT -->
+
+    <div class="container">
+
+        <!-- SETTINGS TABS -->
+
+        <div class="settings-tabs">
+            <h4 class="mt-4">Ebilling</h4>
+            <ul class="settings-tabs-wrap d-flex nav" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#my-cards" role="tab" aria-controls="description" aria-selected="true">My cards</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#prepay-account" role="tab" aria-controls="packaging" aria-selected="false">Pre-pay account</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#transactions" role="tab" aria-controls="default-settings" aria-selected="false">Transactions</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tab-content ebilling-content settings-content">
+            <!-- MY CARDS TAB -->
+            <div class="tab-pane fade mb-5" id="my-cards" role="tabpanel">
+               <div class="settings-form account-settings-form ebilling-content">
+                    <!-- -- -->
+                    <div class="d-flex mt-4 mb-5 mr-4 position-relative">
+                        <button class="pr-4 pl-4 pt-2 pb-2 add-card-btn blue-outline-light-btn">
+                            Add card
+                        </button>
+                    </div>
+                    <div class="table mt-5 mb-5 account-table settings-table add-card-table">
+                        <div class="table-wrap overflow-hidden">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="pl-0 w-0">Payment type</th>
+                                    <th class="pl-0 w-0p">Card name</th>
+                                    <th class="pl-0 w-0p">Card number</th>
+                                    <th class="pl-0 w-25p">Expiry date</th>
+                                    <th class="pl-0 w-25p">Default</th>
+                                    <th class="pl-0 w-25p"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>
+                                        <span>
+                                            <img src="./img/icons/visa-icon.png" alt="visa icon" class="icon-medium mr-2">
+                                            Visa
+                                        </span>
+                                    </td>
+                                    <td>
+                                        Debit Card
+                                    </td>
+                                    <td>
+                                        **** **** **** 0007
+                                    </td>
+                                    <td>
+                                        05/22
+                                    </td>
+                                    <td>
+                                        <div class="table-actions">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="table-actions pull-right">
+                                                        <span data-toggle="modal" data-target="#confirmRemove">
+                                                            <a href="#">Edit</a>
+                                                            </i><span class="sr-only">Edit</span>
+                                                        </span>
+                                            <span data-toggle="modal" data-target="#confirmRemove">
+                                                            <i data-toggle="tooltip" data-placement="top" title="" class="far fa-trash-alt" aria-hidden="true" data-original-title="Remove">
+                                                            </i><span class="sr-only">Remove</span>
+                                                        </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td>
+                                        <span>
+                                            <img src="./img/icons/master-card-icon.png" alt="mastercard icon" class="icon-medium mr-2">
+                                            Mastercard
+                                        </span>
+                                        </td>
+                                        <td>
+                                            Credit card
+                                        </td>
+                                        <td>
+                                            **** **** **** 7849
+                                        </td>
+                                        <td>
+                                            11/22
+                                        </td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-actions pull-right">
+                                                        <span data-toggle="modal" data-target="#confirmRemove">
+                                                            <a href="#">Edit</a>
+                                                            </i><span class="sr-only">Edit</span>
+                                                        </span>
+                                                <span data-toggle="modal" data-target="#confirmRemove">
+                                                            <i data-toggle="tooltip" data-placement="top" title="" class="far fa-trash-alt" aria-hidden="true" data-original-title="Remove">
+                                                            </i><span class="sr-only">Remove</span>
+                                                        </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        <span>
+                                            <img src="./img/icons/visa-icon.png" alt="visa icon" class="icon-medium mr-2">
+                                            Visa
+                                        </span>
+                                        </td>
+                                        <td>
+                                            Business card
+                                        </td>
+                                        <td>
+                                            **** **** **** 1648
+                                        </td>
+                                        <td>
+                                            08/22
+                                        </td>
+                                        <td>
+                                            <div class="table-actions">
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="table-actions pull-right">
+                                                        <span data-toggle="modal" data-target="#confirmRemove">
+                                                            <a href="#">Edit</a>
+                                                            </i><span class="sr-only">Edit</span>
+                                                        </span>
+                                                <span data-toggle="modal" data-target="#confirmRemove">
+                                                            <i data-toggle="tooltip" data-placement="top" title="" class="far fa-trash-alt" aria-hidden="true" data-original-title="Remove">
+                                                            </i><span class="sr-only">Remove</span>
+                                                        </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="add-description-block mt-2">
+                            <a class="btn add-description-btn pl-0 " href="#">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+                                    <title>Group 16</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Buttons-Copy" transform="translate(-87.000000, -856.000000)" fill="#2882BE" fill-rule="nonzero">
+                                            <g id="Group-16" transform="translate(87.000000, 856.000000)">
+                                                <path d="M12,24 C18.627417,24 24,18.627417 24,12 C24,5.372583 18.627417,0 12,0 C5.372583,0 0,5.372583 0,12 C0,18.627417 5.372583,24 12,24 Z M12,21.5 C6.75329488,21.5 2.5,17.2467051 2.5,12 C2.5,6.75329488 6.75329488,2.5 12,2.5 C17.2467051,2.5 21.5,6.75329488 21.5,12 C21.5,17.2467051 17.2467051,21.5 12,21.5 Z" id="Oval"></path>
+                                                <path d="M12.9428177,6 L12.942,11.127 L17.751068,11.1273407 L17.751068,12.8364542 L12.942,12.836 L12.9428177,17.9637949 L11.2337042,17.9637949 L11.233,12.836 L6,12.8364542 L6,11.1273407 L11.233,11.127 L11.2337042,6 L12.9428177,6 Z" id="Combined-Shape"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                Add card
+                            </a>
+                        </div>
+                    </div>
+                    <div class="edit-settings-wrap d-flex flex-column">
+                        <div class="d-flex mt-5 mb-4 border-pseudo w-100 position-relative">
+                            <h5 class="mr-3">Add payment method</h5>
+                        </div>
+
+                        <fieldset>
+                            <div class="d-flex mt-1 account-type-span">
+                                <label>Card type</label>
+                            </div>
+                            <div class="radio-group-wrap d-flex flex-column flex-md-row mt-2 mb-0">
+                                <label class="radio-group">
+                                    <div class="element-group no-label d-flex align-items-center">
+                                        <label class="element-static-label mr-1">
+                                            <input type="radio" name="measure-level-fieldset" class="element-input" data-materialize />
+                                        </label>
+                                        <img src="./img/icons/visa-icon.png" alt="visa icon" class="icon-medium mr-2">
+                                        Visa
+                                    </div>
+                                </label>
+                                <label class="radio-group">
+                                    <div class="element-group no-label d-flex align-items-center">
+                                        <label class="element-static-label mr-1">
+                                            <input type="radio" name="measure-level-fieldset" class="element-input" data-materialize />
+                                        </label>
+                                        <img src="./img/icons/master-card-icon.png" alt="visa icon" class="icon-medium mr-2">
+                                        Mastercard
+                                    </div>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <label class="mt-4">
+                            Card name
+                            <input type="text" class="gray-input contact-details-input mt-1 d-block">
+                        </label>
+                        <label class="mt-4">
+                            Card number
+                            <input type="text" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            Expity date
+                            <input type="text" class="gray-input contact-details-input d-block input-sm-length">
+                        </label>
+                        <label class="mt-4">
+                            Security number
+                            <input type="password" class="gray-input contact-details-input d-block input-sm-length">
+                        </label>
+                        <div class="element-group no-label mt-2">
+                            <label class="element-static-label">
+                                <input type="checkbox" name="measure-level-fieldset" class="element-input" data-materialize />
+                                Make default
+                            </label>
+                        </div>
+
+                        <div class="d-flex mt-5 mb-3 border-pseudo w-100 position-relative">
+                            <h5 class="mr-3">Billing address</h5>
+                        </div>
+
+                        <label class="mt-4">
+                            Company name
+                            <input type="text" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            Address line 1
+                            <input type="text" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            Address line 2
+                            <input type="text" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            City
+                            <input type="text" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            State
+                            <input type="text" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            Country
+                            <select class="gray-input contact-details-input d-block pt-2 pb-2">
+                                <option disabled>Select a country</option>
+                                <option selected>United Kingdom</option>
+                            </select>
+                        </label>
+                        <label class="mt-4 mb-4">
+                            Postcode
+                            <input type="text" class="gray-input contact-details-input d-block input-sm-length">
+                        </label>
+
+
+                        <div class="save-cancel-wrap mt-3 mb-2 d-block">
+                            <button class="btn btn-blue-adv not-rounded mr-2 pt-2 pb-2 pr-3 pl-3 btn-sm save-contact-btn text-uppercase">
+                                Save payment
+                            </button>
+                            <button class="btn not-rounded btn-sm cancel-contact-btn text-uppercase">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                    <!-- -- -->
+                    <hr>
+                    <div class="edit-settings-wrap d-flex flex-column">
+                        <div class="d-flex flex-sm-row flex-column mt-5 mb-4 border-pseudo w-100 position-relative">
+                            <h5 class="mr-3">Edit "Business card"</h5>
+                            <button class="pr-4 pl-4 pt-2 pb-2 delete-payment-btn dark-outline-btn">
+                                Delete payment
+                            </button>
+                        </div>
+
+                        <fieldset>
+                            <div class="d-flex mt-1 account-type-span">
+                                <label>Card type</label>
+                            </div>
+                            <div class="radio-group-wrap d-flex flex-column flex-md-row mt-2 mb-0">
+                                <label class="radio-group">
+                                    <div class="element-group no-label d-flex align-items-center">
+                                        <label class="element-static-label element-active mr-1">
+                                            <input type="radio" name="measure-level-fieldset" class="element-input" data-materialize />
+                                        </label>
+                                        <img src="./img/icons/visa-icon.png" alt="visa icon" class="icon-medium mr-2">
+                                        Visa
+                                    </div>
+                                </label>
+                                <label class="radio-group">
+                                    <div class="element-group no-label d-flex align-items-center">
+                                        <label class="element-static-label mr-1">
+                                            <input type="radio" name="measure-level-fieldset" class="element-input" data-materialize />
+                                        </label>
+                                        <img src="./img/icons/master-card-icon.png" alt="visa icon" class="icon-medium mr-2">
+                                        Mastercard
+                                    </div>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <label class="mt-4">
+                            Card name
+                            <input type="text" value="Business card" class="gray-input contact-details-input mt-1 d-block">
+                        </label>
+                        <label class="mt-4">
+                            Card number
+                            <input type="text" value="**** **** **** 1648" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            Expiry date
+                            <input type="text" value="08/22" class="gray-input contact-details-input d-block input-sm-length">
+                        </label>
+                        <label class="mt-4">
+                            Security number
+                            <input type="password" value="123" class="gray-input contact-details-input d-block input-sm-length">
+                        </label>
+                        <div class="element-group no-label mt-2">
+                            <label class="element-static-label">
+                                <input type="checkbox" valuename="measure-level-fieldset" class="element-input" data-materialize />
+                                Make default
+                            </label>
+                        </div>
+
+                        <div class="d-flex mt-5 mb-3 border-pseudo w-100 position-relative">
+                            <h5 class="mr-3">Billing address</h5>
+                        </div>
+
+                        <label class="mt-4">
+                            Company name
+                            <input type="text" value="Parcelman" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            Address line 1
+                            <input type="text" value=" 1 London road" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            Address line 2
+                            <input type="text" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            City
+                            <input type="text" value="London" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            State
+                            <input type="text" class="gray-input contact-details-input d-block">
+                        </label>
+                        <label class="mt-4">
+                            Country
+                            <select class="gray-input contact-details-input d-block pt-2 pb-2">
+                                <option disabled>Select a country</option>
+                                <option selected>United Kingdom</option>
+                            </select>
+                        </label>
+                        <label class="mt-4 mb-4">
+                            Postcode
+                            <input type="text" value=" W1 3NL" class="gray-input contact-details-input d-block input-sm-length">
+                        </label>
+
+
+                        <div class="save-cancel-wrap mt-3 mb-2 d-block">
+                            <button class="btn btn-blue-adv not-rounded mr-2 pt-2 pb-2 pr-3 pl-3 btn-sm save-contact-btn text-uppercase">
+                                Save payment
+                            </button>
+                            <button class="btn not-rounded btn-sm cancel-contact-btn text-uppercase">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRE-PAY ACCOUNT TAB -->
+            <div class="tab-pane fade mb-5" id="prepay-account" role="tabpanel">
+                <!-- AMOUNT WIDGET -->
+                <section class="wallet-amount-widget pt-4 pb-0">
+                <div class="container border-none pl-0 pr-0">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card h-100">
+                                <div class="card-body double-padding">
+                                    <div class="w-100">
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-12 p-0 d-flex justify-content-md-start justify-content-center">
+                                                    <div>
+                                                        <?xml version="1.0" encoding="UTF-8"?>
+                                                        <svg width="36px" height="35px" class="mr-3" viewBox="0 0 26 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                            <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+                                                            <title>Group 13</title>
+                                                            <desc>Created with Sketch.</desc>
+                                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                <g id="Buttons-Copy" transform="translate(-85.000000, -681.000000)" fill="#FFF" fill-rule="nonzero">
+                                                                    <g id="Group-13" transform="translate(85.000000, 681.000000)">
+                                                                        <path d="M23,4.33213364 L22,4.33213364 L22,3.00213364 C22,2.05786173 21.5554175,1.16869679 20.8,0.602133641 C20.0421495,0.0323590658 19.0595538,-0.145620542 18.15,0.122133641 L3.86,4.33213364 L3,4.33213364 C1.34314575,4.33213364 0,5.67527939 0,7.33213364 L0,21.3321336 C0,22.9889879 1.34314575,24.3321336 3,24.3321336 L23,24.3321336 C24.6568542,24.3321336 26,22.9889879 26,21.3321336 L26,7.33213364 C26,5.67527939 24.6568542,4.33213364 23,4.33213364 Z M2,7.33213364 L24,7.33213364 L24,10.3321336 L22,10.3321336 C19.790861,10.3321336 18,12.1229946 18,14.3321336 C18,16.5412726 19.790861,18.3321336 22,18.3321336 L24,18.3321336 L24,21.3321336 L2,21.3321336 L2,7.33213364 Z M24,12.3321336 L24,16.3321336 L22,16.3321336 C20.8954305,16.3321336 20,15.4367031 20,14.3321336 C20,13.2275641 20.8954305,12.3321336 22,12.3321336 L24,12.3321336 Z M18.72,2.04213364 C19.0290403,1.95171391 19.3627129,2.01563759 19.6164539,2.2138727 C19.8701948,2.41210781 20.012956,2.72039808 20,3.04213364 L20,4.33213364 L10.94,4.33213364 L18.72,2.04213364 Z M3,6.33213364 L23,6.33213364 C23.5522847,6.33213364 24,6.77984889 24,7.33213364 L2,7.33213364 C2,6.77984889 2.44771525,6.33213364 3,6.33213364 Z M23,22.3321336 L3,22.3321336 C2.44771525,22.3321336 2,21.8844184 2,21.3321336 L24,21.3321336 C24,21.8844184 23.5522847,22.3321336 23,22.3321336 Z" id="Shape"></path>
+                                                                        <path d="M21.62,13.4121336 C21.5562757,13.434022 21.4957452,13.4642872 21.44,13.5021336 L21.29,13.6221336 C21.2469948,13.6696535 21.2069207,13.7197461 21.17,13.7721336 C21.1321536,13.8278788 21.1018883,13.8884094 21.08,13.9521336 C21.0511678,14.0088193 21.0309456,14.0694858 21.02,14.1321336 C21.0150914,14.19871 21.0150914,14.2655573 21.02,14.3321336 C21.02158,14.4628109 21.048759,14.5919113 21.1,14.7121336 C21.1475944,14.834885 21.2189594,14.9470299 21.31,15.0421336 L21.46,15.1621336 C21.5157452,15.1999801 21.5762757,15.2302453 21.64,15.2521336 L21.82,15.3121336 L22.02,15.3121336 L22.21,15.3121336 C22.2762347,15.3028628 22.3404533,15.2825833 22.4,15.2521336 C22.4614334,15.2321632 22.5189484,15.2017141 22.57,15.1621336 L22.73,15.0421336 C22.8210406,14.9470299 22.8924056,14.834885 22.94,14.7121336 C22.984406,14.5905442 23.004783,14.4614898 23,14.3321336 C23.0049086,14.2655573 23.0049086,14.19871 23,14.1321336 C22.9890544,14.0694858 22.9688322,14.0088193 22.94,13.9521336 C22.9181117,13.8884094 22.8878464,13.8278788 22.85,13.7721336 L22.73,13.6221336 C22.4912247,13.3707984 22.1393109,13.2610618 21.8,13.3321336 L21.62,13.4121336 Z" id="Path"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h5 class="text-regular-medium mb-0">£38.64</h5>
+                                                        <span class="text-lighter">Wallet balance available</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                <div class="settings-form settings-card d-flex flex-column">
+                    <div class="d-flex mt-5 mb-2 border-pseudo w-100 position-relative">
+                        <h5 class="mr-3">Top up my account</h5>
+                    </div>
+
+                    <label class="mt-4">
+                        Amount
+                        <span class="d-flex align-items-center">
+                            <input type="text" class="gray-input contact-details-input mt-1 d-block mr-3 input-sm-length">
+                            GBP
+                        </span>
+                    </label>
+                    <label class="mt-4">
+                        Use card
+                        <select class="gray-input contact-details-input d-block pt-2 pb-2">
+                            <option disabled>Select card</option>
+                            <option selected>Debit card</option>
+                            <option selected>Credit card</option>
+                            <option selected>Bussiness card</option>
+                        </select>
+                    </label>
+
+                    <div class="add-description-block pt-2">
+                        <button class="btn add-description-btn p-0 add-user-btn">
+                            <?xml version="1.0" encoding="UTF-8"?>
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+                                <title>Group 16</title>
+                                <desc>Created with Sketch.</desc>
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="Buttons-Copy" transform="translate(-87.000000, -856.000000)" fill="#2882BE" fill-rule="nonzero">
+                                        <g id="Group-16" transform="translate(87.000000, 856.000000)">
+                                            <path d="M12,24 C18.627417,24 24,18.627417 24,12 C24,5.372583 18.627417,0 12,0 C5.372583,0 0,5.372583 0,12 C0,18.627417 5.372583,24 12,24 Z M12,21.5 C6.75329488,21.5 2.5,17.2467051 2.5,12 C2.5,6.75329488 6.75329488,2.5 12,2.5 C17.2467051,2.5 21.5,6.75329488 21.5,12 C21.5,17.2467051 17.2467051,21.5 12,21.5 Z" id="Oval"></path>
+                                            <path d="M12.9428177,6 L12.942,11.127 L17.751068,11.1273407 L17.751068,12.8364542 L12.942,12.836 L12.9428177,17.9637949 L11.2337042,17.9637949 L11.233,12.836 L6,12.8364542 L6,11.1273407 L11.233,11.127 L11.2337042,6 L12.9428177,6 Z" id="Combined-Shape"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            Add card
+                        </button>
+                    </div>
+
+                    <div>
+                        <button class='btn btn-gradient-primary d-block mt-4 align-items-start'>
+                            Top up account
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- TRANSACTIONS TAB -->
+            <div class="tab-pane fade mb-5 show active" id="transactions" role="tabpanel">
+
+                <section class="search-shipment pt-4 pb-0">
+                    <form class="search-shipment-menu">
+                            <div class="search-input-form d-flex">
+                                <input type="text" class="form-control not-rounded" placeholder="Search shipments">
+                                <button type='submit' class="btn dark-btn not-rounded pr-3 pl-3">
+                                    Search
+                                </button>
+                            </div>
+                            <button type="button" class="btn pl-3 pr-3 select-date-btn">
+                                <img src="./img/icons/date-range-i.png" class="mr-3" alt="date range">
+                                Select date
+                            </button>
+                        </form>
+                    <div class="settings-form">
+                        <div class="table mt-5 mb-5 account-table settings-table add-card-table">
+                        <div class="table-wrap overflow-hidden">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th class="w-0">Date</th>
+                                    <th class="w-0">Invoice type</th>
+                                    <th class="w-0">Invoice number</th>
+                                    <th class="w-0">Amount</th>
+                                    <th class="w-25p">Payment method</th>
+                                    <th class="w-25p"></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td>
+                                        05/12/2015
+                                    </td>
+                                    <td>
+                                        Invoice
+                                    </td>
+                                    <td>
+                                        215465
+                                    </td>
+                                    <td>
+                                        £24.25
+                                    </td>
+                                    <td>
+                                        <span class="d-flex align-items-center">
+                                            <img src="./img/icons/visa-icon.png" alt="visa icon" class="icon-medium mr-2">
+                                            Visa
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="table-actions pull-right">
+                                           <span data-toggle="modal" data-target="#confirmRemove">
+                                                <a href="#">Edit</a>
+                                                </i><span class="sr-only">Edit</span>
+                                            </span>
+                                            <span data-toggle="modal" data-target="#confirmRemove">
+                                                <i data-toggle="tooltip" data-placement="top" title="" class="far fa-trash-alt" aria-hidden="true" data-original-title="Remove">
+                                               </i><span class="sr-only">Remove</span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                    <tr>
+                                    <td>
+                                        05/12/2015
+                                    </td>
+                                    <td>
+                                        Account Top-Up
+                                    </td>
+                                    <td>
+                                        757878
+                                    </td>
+                                    <td>
+                                        £100
+                                    </td>
+                                    <td>
+                                        <span class="d-flex align-items-center">
+                                            <img src="./img/icons/master-card-icon.png" alt="visa icon" class="icon-medium mr-2">
+                                            Mastercard
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="table-actions pull-right">
+                                           <span data-toggle="modal" data-target="#confirmRemove">
+                                                <a href="#">Edit</a>
+                                               </i><span class="sr-only">Edit</span>
+                                            </span>
+                                            <span data-toggle="modal" data-target="#confirmRemove">
+                                                <i data-toggle="tooltip" data-placement="top" title="" class="far fa-trash-alt" aria-hidden="true" data-original-title="Remove">
+                                               </i><span class="sr-only">Remove</span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                    <tr>
+                                    <td>
+                                        05/12/2015
+                                    </td>
+                                    <td>
+                                        Adjustment Invoice
+                                    </td>
+                                    <td>
+                                        827578
+                                    </td>
+                                    <td>
+                                        £72.54
+                                    </td>
+                                    <td>
+                                        <span class="d-flex align-items-center">
+                                            <img src="./img/icons/visa-icon.png" alt="visa icon" class="icon-medium mr-2">
+                                            Visa
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="table-actions pull-right">
+                                           <span data-toggle="modal" data-target="#confirmRemove">
+                                                <a href="#">Edit</a>
+                                               </i><span class="sr-only">Edit</span>
+                                            </span>
+                                            <span data-toggle="modal" data-target="#confirmRemove">
+                                                <i data-toggle="tooltip" data-placement="top" title="" class="far fa-trash-alt" aria-hidden="true" data-original-title="Remove">
+                                               </i><span class="sr-only">Remove</span>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="add-description-block mt-2">
+                            <a class="btn add-description-btn pl-0 " href="#">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+                                    <title>Group 16</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Buttons-Copy" transform="translate(-87.000000, -856.000000)" fill="#2882BE" fill-rule="nonzero">
+                                            <g id="Group-16" transform="translate(87.000000, 856.000000)">
+                                                <path d="M12,24 C18.627417,24 24,18.627417 24,12 C24,5.372583 18.627417,0 12,0 C5.372583,0 0,5.372583 0,12 C0,18.627417 5.372583,24 12,24 Z M12,21.5 C6.75329488,21.5 2.5,17.2467051 2.5,12 C2.5,6.75329488 6.75329488,2.5 12,2.5 C17.2467051,2.5 21.5,6.75329488 21.5,12 C21.5,17.2467051 17.2467051,21.5 12,21.5 Z" id="Oval"></path>
+                                                <path d="M12.9428177,6 L12.942,11.127 L17.751068,11.1273407 L17.751068,12.8364542 L12.942,12.836 L12.9428177,17.9637949 L11.2337042,17.9637949 L11.233,12.836 L6,12.8364542 L6,11.1273407 L11.233,11.127 L11.2337042,6 L12.9428177,6 Z" id="Combined-Shape"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                                Add card
+                            </a>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+
+            </div>
+
+         </div>
+
+      </div>
+
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="/js/app/pages/billing.js"></script>
+{% endblock %}

@@ -1,0 +1,19 @@
+.sign-in {
+  display: flex;
+  align-items: stretch;
+  width: 800px;
+
+  >div {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+    flex-direction: column;
+
+    >div {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Light.woff2') format('woff2'),
+      url('../fonts/Roboto-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Medium.woff2') format('woff2'),
+      url('../fonts/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2'),
+      url('../fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Bold.woff2') format('woff2'),
+      url('../fonts/Roboto-Bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?u4hltg');
+  src:  url('../fonts/icomoon.eot?u4hltg#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?u4hltg') format('truetype'),
+    url('../fonts/icomoon.woff?u4hltg') format('woff'),
+    url('../fonts/icomoon.svg?u4hltg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-intro-1:before {
+  content: "\e900";
+}
+.icon-intro-2:before {
+  content: "\e901";
+}
+.icon-icon_check_shield:before {
+  content: "\e90e";
+}
+.icon-icon_weighing-scale:before {
+  content: "\e90f";
+}
+.icon-clock:before {
+  content: "\e910";
+}
+.icon-down-angle-bracket:before {
+  content: "\e911";
+}
+.icon-info:before {
+  content: "\e912";
+}
+.icon-location:before {
+  content: "\e913";
+}
+.icon-printer-not-required:before {
+  content: "\e914";
+}
+.icon-printer-required:before {
+  content: "\e915";
+}
+.icon-user:before {
+  content: "\e916";
+}
+.icon-users:before {
+  content: "\e917";
+}
+.icon-settings:before {
+  content: "\e918";
+}
+.icon-shield:before {
+  content: "\e919";
+}
+.icon-check:before {
+  content: "\e902";
+}
+.icon-help:before {
+  content: "\e903";
+}
+.icon-shield-check:before {
+  content: "\e904";
+}
+.icon-login:before {
+  content: "\e905";
+}
+.icon-live-chat:before {
+  content: "\e906";
+}
+.icon-close:before {
+  content: "\e907";
+}

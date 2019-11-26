@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parcelhero Checkout</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+
+<header class="header-account" id="main-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="logo-with-progress">
+                    <a href="./"><img src="img/ph_logo.svg" alt="parcel-logo" class='logo-img'></a>
+                    <div class="progress-tracker absolute-center">
+                        <div class="completed">
+                            <div><span>1</span><i class="icon-check"></i></div><span>Parcel details</span>
+                        </div>
+                        <div class="current">
+                            <div><span>2</span><i class="icon-check"></i></div><span>Customs details</span>
+                        </div>
+                        <div>
+                            <div><span>3</span><i class="icon-check"></i></div><span>Payment details</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="bg-gray-light pt-g">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="block customs-details mb-g">
+                    <h4>Customs details</h4>
+                    <p>Customs documents are required when sending items internationally. To create the documents
+                        please enter the following details to allow your parcel to pass through customs.
+                    </p>
+
+                    <div class="mb-5">
+                        <div class="block-title mb-0">
+                            <label class="text-label" for="export-reason">Export Reason</label> <i class="icon-help"></i>
+                        </div>
+                        <div class="search-input">
+                            <select class="form-control not-rounded dark-theme" id="export-reason">
+                                <option value="none" selected disabled>Please select a reason for export</option>
+                                <option value="sale">Sale</option>
+                                <option value="personal-gift">Personal gift</option>
+                                <option value="other-reason">Other reason</option>
+                            </select>
+                        </div>
+
+                        <div class="block-title sale-option mt-4 mb-0" id="sale-option-title">
+                            <label class="text-label">Declaration statement<span>Optional</span></label>
+                        </div>
+
+                        <p class="sale-option mb-0" id="sale-option-text">Declaration statement lorem ipsum dolor sit amet, consectetur adipiscing elit ut euismod mi consequat.</p>
+                        <p class="sale-option" id="sale-option-edit"><span>Edit</span></p>
+                        <textarea id="sale-option-editor">Declaration statement lorem ipsum dolor sit amet, consectetur adipiscing elit ut euismod mi consequat.</textarea>
+                    </div>
+
+                    <h5 class="header-underline mb-4">Shipment contents</h5>
+                    <p>Please describe the contents and enter the value of your items below.</p>
+                    
+                    <div class="personal-gift-option mb-4">
+                        <div class="personal-gift-option-text">
+                            <i class="icon-info mr-2"></i><p class="mb-0">For gifts the maximum value you can send to <country> is £100. Exceeding this amount may incur charges at customs.</p>
+                        </div>
+                    </div>
+
+                    <div id="item-box-list">
+                        <div class="item-box mb-2">
+                            <div class="item-header">
+                                <h5 class="header-underline mb-3 item_title"><span class="item-quantity mr-2">1</span>Item 1</h5>
+                                <h5 class="item-tool">
+                                    <i>&pound;</i>&nbsp;<span class="item-value">0.00</span>
+                                    <img src="img/icon_edit_pencil.svg" class="edit-item ml-3" alt="Edit Icon">
+                                    <img src="img/icon_delete_bin.svg" class="delete-item ml-3" alt="Delete Icon">
+                                </h5>
+                            </div>
+
+                            <div class="item-details">
+                                <div class="block-title mb-0">
+                                    <label class="text-label" for="quantity">Quantity</label>
+                                </div>
+                                <div class="search-input quantity-input-block">
+                                    <span class="fa-stack quantity-minus" style="vertical-align: top;">
+                                        <i class="fas fa-circle disabled fa-stack-2x"></i>
+                                        <i class="fas fa-minus fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                    <input type="tel" name="quantity" placeholder="" class="form-control not-rounded quantity-count" value="1">
+                                    <span class="fa-stack quantity-plus" style="vertical-align: top;">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </div>
+
+                                <div class="block-title mt-4 mb-0">
+                                    <label class="text-label" for="product-name">Product name</label>
+                                </div>
+                                <div class="search-input">
+                                    <input type="text" name="product-name" placeholder="" value="Item 1" class="form-control not-rounded product-name">
+                                </div>
+
+                                <div class="row mt-4">
+                                    <div class="col-md-6">
+                                        <div class="block-title mb-0">
+                                            <label class="text-label" for="value-input">Value</label>
+                                        </div>
+                                        <div class="search-input">
+                                            <div class="input-icon">
+                                                <input type="number" min="0" value="0" name="value-input" placeholder="" class="form-control not-rounded value-input">
+                                                <i>&pound;</i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mt-4 mt-md-0">
+                                        <div class="block-title mb-0">
+                                            <label class="text-label" for="tarrif-code">Tarrif code</label> <i class="icon-help"></i>
+                                        </div>
+                                        <div class="search-input">
+                                            <input type="text" name="tarrif-code" placeholder="" class="form-control not-rounded tarrif-code">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="add-description-block mt-3">
+                        <button class="btn add-description-btn p-0" id="add-item-btn">
+                            <i class="fa-plus fa"></i>
+                            Add another item
+                        </button>
+                    </div>
+
+                    <div class="personal-gift-option mt-3">
+                        <div class="personal-gift-option-warn">
+                            <div class="info-title">
+                                <p class="mb-0"><i class="fa fa-exclamation-triangle mr-2"></i> Total value</p>
+                                <p>£102.00</p>
+                            </div>
+                            <p class="mb-0">The total value exceeds customs limits for gifts, you may proceed with your order but you may incur extra customs charges at the destination country.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="btn btn-additional not-rounded disabled mb-4" href="order-summary.html">Continue to order summary</a>
+
+            </div>
+            <div class="col-lg-4">
+                <div class="block pt-0 pb-0 mb-3">
+                    <div class="collapse-toggler simple disabled enabled-md" data-toggle="collapse" data-target="#collapseDtl" aria-expanded="true" aria-controls="collapseDtl">
+                        <h4 class="text-light-subtitle">Parcel details</h4><i class="fas fa-chevron-down d-block d-lg-none"></i>
+                    </div>
+                    <div class="collapse show" id="collapseDtl">
+                        <div class="border-bottom text-gray-darker">
+                            <div class="mb-2">1 x 1.5kg, 45cm x 16cm x 12cm</div>
+                            <div class="pb-4">To: United Kingdom</div>
+                            <div id="parcel-cost" class="text-gray-darker d-none">
+                                <div class="fw-500">Billing summary</div>
+                                <div class="text-small d-flex justify-content-between pt-3 pb-3">
+                                    <span>Shipping costs</span>
+                                    <span>£<span id="parcel-shiping-cost">12.13</span></span>
+                                </div>
+                                <div class="text-small d-flex justify-content-between pb-3 border-bottom">
+                                    <span>VAT</span>
+                                    <span>£<span id="parcel-shiping-vat">2.43</span></span>
+                                </div>
+                                <div class="text-dark text-strong-title mb-0 d-flex justify-content-between pt-3 pb-3">
+                                    <span>TOTAL</span>
+                                    <span>£<span id="parcel-shiping-total">14.56</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2 text-right pb-4">
+                            <span class="text-tiny mr-2">Pay Securely with</span><img src="./img/icons/payments-methods.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-block-blue mb-3" id="parcel-login"><i class="icon-login"></i> Book faster: Log in</button>
+
+                <div class="block pt-0 pb-0 mb-3">
+    <div class="collapse-toggler simple disabled enabled-md" data-toggle="collapse" data-target="#collapseInf" aria-expanded="true" aria-controls="collapseInf">
+        <h4 class="text-light-subtitle">Service information</h4><i class="fas fa-chevron-down d-block d-lg-none"></i>
+    </div>
+    <div class="collapse show" id="collapseInf">
+        <div><img class="icon-xl mr-3" src="./img/icons/ups-square.png" alt=""><span class="text-strong">UPS Standard</span></div>
+        <div class="text-small pb-4 pt-4">
+            <div><strong>Service conditions:</strong></div>
+            <div>Max Parcel Length: 270 cm</div>
+            <div>Max Parcel Weight: 70 kg</div>
+            <div>Max Length + Girth: 330 cm</div>
+        </div>
+    </div>
+</div>
+
+                <button class="btn btn-block-blue mb-3"><i class="icon-live-chat"></i>Live help</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal-custom not-rounded" id="modal-sign-in">
+    <div class="modal-custom-cover"></div>
+    <div class="modal">
+        <div class="modal-custom-content p-0 scroll-bg-gray-light">
+            <i alt="close button" class="icon-close close-btn"></i>
+            <div class="sign-in">
+                <div>
+                    <h4 class="text-medium-subtitle text-center mb-4">Sign in</h4>
+                    <div class="mb-4 text-small text-gray-darker">Please sign in or register to save your parcel description for future shipments</div>
+                    <form action="sign-in">
+                        <input type="text" name="email" placeholder="Email" value="" class="form-control w-100 not-rounded value-input dark-theme mb-4" required>
+                        <input type="text" name="password" placeholder="Password" value="" class="form-control w-100 not-rounded value-input dark-theme mb-4" required>
+                        <button class="btn btn-primary not-rounded w-100 mb-3" type="submit">SIGN IN</button>
+                    </form>
+                    <div class="border-bottom pb-3 text-center text-small"><a class="link-neutral" href="forgot.html">Forgot password?</a></div>
+                    <div class="text-center pt-4 pb-4 text-small-medium">Login with an existing account</div>
+                    <div class="socials big-squares">
+                        <div class="google-plus"><i class="fab fa-google"></i></div>
+                        <div class="facebook"><i class="fab fa-facebook-f"></i></div>
+                        <div class="lined-in"><i class="fab fa-linkedin-in"></i></div>
+                    </div>
+                </div>
+                <div class="bg-gray-light">
+                    <h4 class="text-medium-subtitle text-center mb-4 text-success-adv">Register</h4>
+                    <div class="mb-4 text-small text-gray-darker mb-4">Join now and you can save even more on your shipping costs.</div>
+                    <ul class="list-secondary mb-4">
+                        <li>Automatic updates</li>
+                        <li>Rewards program</li>
+                        <li>Special offers and more!</li>
+                    </ul>
+                    <button class="btn btn-success-adv not-rounded w-100 mb-3" type="submit">REGISTER NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src='/js/jquery.js'></script>
+<script src="/js/popper.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src='/js/bootstrap-select.js'></script>
+<script src='/js/charts/circleChart.min.js'></script>
+<script src='/js/flatpickr.js'></script>
+<script src='/js/form-anims.js'></script>
+<script src='/js/jquery.ripple.js'></script>
+<script src='/js/app/iefixes.js'></script>
+<script src='/js/app/data.js'></script>
+<script src='/js/app/script.js'></script>
+<script src='/js/app/middle-sidebar.js'></script>
+<script src='/js/app/header.js'></script>
+<script src="/js/app/pages/customs.js"></script>
+<script src="/js/app/modal.js"></script>
+<script src="/js/app/checkboxes.js"></script>
+
+
+<script src='/js/app/pages/customs-details.js'></script>
+
+
+</body>
+</html>

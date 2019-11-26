@@ -1,0 +1,264 @@
+.search-shipment{
+
+  &-title{
+    font-weight: 400 !important;
+
+  }
+
+  h2{
+    color: $label-form;
+    font-weight: 300;
+
+    font-size: 2em;
+
+  }
+  .input-group-text{
+    background-color: $white;
+    border-left: solid 1px #e9ecef;
+    border-bottom: solid 1px #e9ecef;
+
+    border-radius: 0;
+
+    padding-bottom: 0.75em;
+    border-top: solid 1px #e9ecef;
+
+  }
+
+  input, select{
+    border-radius: 0px;
+    color: $label-form;
+
+  }
+
+  &-menu{
+    display: flex;
+    background-color: $gray-8;
+
+    padding: 0.3em 0em;
+
+    font-size: 2rem;
+    font-weight: 200;
+    input{
+      width: 500px;
+      @include media-breakpoint-down(md){
+        max-width: 350px;
+
+      }
+      @include media-breakpoint-down(sm){
+        width: 100%;
+
+      }
+
+    }
+    >*:nth-child(2){
+      color: $black;
+      background-color: $white;
+
+      border: solid 1px $dark-gray;
+      transition: all 0.1s;
+
+      text-transform: uppercase;
+      font-weight: 200;
+      i{
+        color: $black;
+
+      }
+      @include media-breakpoint-down(sm){
+        display: block;
+
+      }
+      &:hover{
+        background-color: rgba(219,232,249,1);
+
+      }
+
+    }
+    @include media-breakpoint-down(sm){
+      display: block;
+
+    }
+    .search-input-form{
+      justify-content: space-between;
+      >*:first-child{
+        margin-right: 1em;
+        margin-left: 1em;
+
+        font-weight: 200;
+
+      }
+      >*:nth-child(2){
+        margin-right: 1.5em;
+        color: $white;
+
+        font-weight: 200;
+
+        text-transform: uppercase;
+        @include media-breakpoint-between(md,lg){
+          padding: 0em 0.5em 0em 0.5em;
+
+        }
+
+      }
+
+    }
+
+  }
+  .search-filter-window{
+    position: relative;
+    display: none;
+
+    box-shadow: 1px 1px 5px 1px $gray;
+    border-radius: 2px;
+
+    padding: 2em 2em;
+    .search-filter-row{
+      display: flex;
+      justify-content: space-between;
+      .form-group{
+        flex-grow: 1;
+        label{
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: $label-form;
+
+        }
+        &:first-child{
+            max-width: 300px;
+            margin-right: 20px;
+          @include media-breakpoint-down(xl){
+            max-width: 300px;
+          }
+          @include media-breakpoint-down(lg){
+            max-width: 200px;
+          }
+          @include media-breakpoint-down(md){
+            max-width: 400px;
+
+          }
+
+        }
+        &:nth-child(2){
+            max-width: 250px;
+            margin-right: 20px;
+          @include media-breakpoint-down(md){
+            max-width: 400px;
+
+          }
+
+        }
+        &:nth-child(3){
+            max-width: 400px;
+            margin-right: 50px;
+          @include media-breakpoint-down(md){
+            max-width: 400px;
+
+          }
+
+        }
+
+      }
+      @include media-breakpoint-down(md){
+        flex-direction: column;
+
+      }
+
+    }
+    .submit-filter-buttons{
+      justify-content: center;
+      display: flex;
+
+      margin-top: 20px;
+
+      >*:first-child{
+        text-transform: uppercase;
+        color: $white;
+
+      }
+
+    }
+    .more-filters{
+      &-btn{
+        background-color: transparent;
+        border: none;
+
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: $label-form;
+
+      }
+      &-span{
+        color: $more-filters;
+        display: block;
+
+        font-size: 0.8em;
+        padding-top: 0.25rem;
+        padding-bottom: 1rem;
+
+      }
+
+    }
+    .filter-border-bottom{
+      width: 100%;
+      height: 0.5px;
+      background-color: $dark-gray;
+
+    }
+    .close-btn-widget{
+      position: absolute;
+
+      top: 20px;
+      right: 17px;
+
+    }
+
+  }
+  .modal-custom{
+     &-content{
+       padding: 4.5em 5em;
+
+     }
+    .close-btn{
+      top: 10px;
+      right: 7px;
+
+    }
+    .search-input-form{
+      button{
+        color: $white;
+        text-transform: uppercase;
+
+      }
+
+    }
+
+  }
+  .save-search{
+    display: flex;
+    #save-search-wrap{
+      display: flex;
+      flex-direction: row;
+      .save-search-block{
+        border: solid 1px $blue-adv;
+        border-radius: 6px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        i{
+
+          margin: 0 10px;
+
+        }
+        button{
+          border: none;
+          background-color: transparent;
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

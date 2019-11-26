@@ -1,0 +1,6 @@
+.home-first-time-widget .row {
+  border: solid 1px #d7d7d7;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px #d7d7d7; }
+  .home-first-time-widget .row .account-block {
+    padding-top: 20px; }

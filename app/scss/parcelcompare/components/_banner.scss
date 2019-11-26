@@ -1,0 +1,50 @@
+.service-banner-area {
+  color: $white;
+  padding: 15px 0;
+  font-size: 1.5rem;
+  background: $blue-light;
+
+  .service-banner-wrapper {
+    width: 100%;
+    display: flex;
+    flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    min-height: 100px;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+    > * {
+      margin: 0 10px;
+    }
+
+    img {
+      padding-right: 20px;
+      border-right: 1px solid $white;
+    }
+    a {
+      color: $white;
+      font-size: 0.875rem;
+      text-decoration: underline;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 1.3rem;
+
+    .service-banner-wrapper {
+      flex-direction: column;
+
+      img {
+        border-right: none;
+        height: auto;
+        width: 300px;
+      }
+
+      p{
+        margin: 20px 0;
+      }
+    }
+  }
+}

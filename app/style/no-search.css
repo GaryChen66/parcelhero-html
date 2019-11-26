@@ -1,0 +1,5 @@
+.home-no-search .no-search-menu {
+  display: flex; }
+  .home-no-search .no-search-menu input {
+    display: flex;
+    flex-grow: 1; }

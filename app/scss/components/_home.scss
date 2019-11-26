@@ -1,0 +1,391 @@
+.home-content {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+
+  flex: 1 0 auto;
+  flex-shrink: 1;
+
+  .account-saving{
+    .row{
+      border: solid 1px $gray;
+      border-radius: 10px;
+
+      box-shadow: 1px 1px 5px 1px $gray;
+
+    }
+
+  }
+
+  .home-widget-full{
+    .info-input-group{
+      flex-grow: 1;
+      @include media-breakpoint-down(xs){
+        display: block;
+
+      }
+
+    }
+    .widget-input-container{
+      @include media-breakpoint-down(md){
+        flex-direction: column;
+
+      }
+
+    }
+
+  }
+
+  .card{
+    border: solid 1px transparent;
+    .card-body{
+      .list-group-wrap{
+        display: flex;
+        margin-right: auto;
+        .list-group{
+          flex-direction: row;
+          &-item{
+            border: solid 1px transparent;
+            display: block;
+            margin-right: 2em;
+            img{
+              float: left;
+
+            }
+            .list-item-label{
+              color: $gray-9;
+              font-size: $font-size-base * 1.5;
+
+              @include media-breakpoint-down(md){
+                font-size: $font-size-base * 1.25;
+
+              }
+
+            }
+            &:after{
+              content: '';
+              position: absolute;
+              right: -0.875rem;
+              top: 10px;
+              width: 1px;
+              height: 55px;
+              background-color: $gray;
+
+              @include media-breakpoint-down(md){
+                display: none;
+
+              }
+              @include media-breakpoint-between(lg, xl){
+                right: -0.875em;
+
+              }
+
+            }
+            &:last-child{
+              &:after{
+                display: none;
+
+              }
+
+            }
+            .text-title-medium{
+              display: inline-block;
+
+              line-height: 1.3em;
+
+            }
+            @include media-breakpoint-down(md){
+              margin-right: 0em;
+
+            }
+            @include media-breakpoint-between(lg, xl){
+              margin-right: 2em;
+
+            }
+
+          }
+          @include media-breakpoint-down(md){
+            flex-direction: column;
+
+          }
+
+        }
+
+      }
+      .account-progress{
+        &-discount{
+          .icon-shield{
+            font-size: 5rem;
+
+          }
+          >div{
+            h4{
+              color: $blue-adv;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+  .shipment-data{
+    .table{
+      thead{
+        th{
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: $label-form;
+          border-top: none;
+          border-bottom: solid 2px $gray;
+
+        }
+
+      }
+      tbody{
+        th{
+          font-size: 1rem;
+          font-weight: 400;
+
+        }
+        tr{
+          font-size: 1rem;
+          color: $label-form;
+
+        }
+      }
+      @include media-breakpoint-down(md){
+        width: 800px;
+
+      }
+
+    }
+
+  }
+  .table-filter{
+    display: flex;
+    background-color: transparent;
+    justify-content: flex-end;
+
+    font-size: 1rem;
+    color: $label-form;
+
+    margin-right: 0.25rem;
+    input{
+      max-width: 30px;
+      max-height: 30px;
+
+      padding: 0em 0.2em 0em 0.3em !important;
+      margin-left: 7px;
+
+    }
+    >*{
+      margin-left: 1em;
+      align-items: center;
+      margin-bottom: 0.5em;
+
+    }
+    .from-to-select{
+      position: relative;
+
+      border: solid 1px $select-btn;
+      color: $select-btn;
+      margin-left: 7px;
+      button{
+        border: none;
+
+      }
+      &:after{
+        content: '';
+        width: 1px;
+        background-color: $select-btn;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+      }
+
+    }
+
+  }
+  .accordion-group{
+     .table{
+       tbody{
+         >*:first-child{
+           td{
+             background-color: $gray-7;
+             color: $label-form;
+           }
+         }
+       }
+       td{
+         color: $label-form;
+
+       }
+
+     }
+
+  }
+
+}
+
+.left-card-pseudo{
+  &:after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: -15px;
+
+    background-color: $gray;
+    margin-top: -80px;
+
+    width: 1.5px;
+    height: 160px;
+    @include media-breakpoint-down(lg){
+      display: none;
+
+    }
+
+  }
+
+}
+
+.my-shipments{
+  .shipment-group-wrap{
+    .text-title-medium{
+      line-height: 0.975em;
+
+    }
+    span{
+      color: $label-form !important;
+
+    }
+    .list-group{
+      &-item{
+        margin-right: 1em;
+        border-radius: 0.4em;
+        padding: 0.75rem 0.75rem;
+
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+        &:hover{
+          border: solid 1px #4f91c9;
+          span{
+            color: #4f91c9 !important;
+
+          }
+
+        }
+
+      }
+      &-item.active-item{
+        border: solid 1px #4f91c9;
+        span{
+          color: #4f91c9 !important;
+          font-weight: 500;
+
+        }
+
+      }
+
+    }
+
+  }
+  .search-shipment-menu{
+     input{
+       width: 100%;
+
+     }
+
+  }
+  .accordion{
+    >*:nth-child(2){
+      img{
+        max-height: 2em;
+
+      }
+
+    }
+    .accordion-group{
+      border: solid 1px rgba(0, 0, 0, 0.125);
+      border-radius: 0.3em;
+
+    }
+    .collapse-toggler{
+      background-color: $white;
+
+      padding: 1.25em 3.25em;
+      color: $label-form;
+
+      font-size: 16px;
+      cursor: default;
+      >div{
+        display: flex;
+        align-items: center;
+
+      }
+      p, span{
+        color: inherit;
+
+      }
+      p{
+        font-size: 1em;
+        font-weight: 500;
+
+      }
+      span{
+        font-size: 0.875em;
+
+      }
+      .view-edit-btn{
+        color: #169bd5;
+        font-size: 0.875em;
+        &:hover{
+          text-decoration: underline;
+
+        }
+
+      }
+      .btn-orange-outline{
+        font-size: 0.8em;
+        padding: 0.5em 0.75em;
+
+      }
+      img{
+        min-width: 6em;
+        max-width: 6em;
+
+      }
+
+    }
+
+  }
+  .table{
+    td{
+      img{
+        min-height: 1.5em;
+
+      }
+
+    }
+
+  }
+  .nav-tabs{
+    .nav-link.active{
+      color: #347DC0;
+
+    }
+
+  }
+  .collapse-toggler.collapsed{
+    cursor: pointer;
+    
+  }
+
+}

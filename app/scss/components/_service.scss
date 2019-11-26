@@ -1,0 +1,255 @@
+.service-list-wrap {
+  .service-list-cols {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+
+    .service-list-col {
+      width: calc(100% / 3 - #{$grid-gutter-width}* 0.75);
+
+      .service-list-head {
+        .service-label {
+          h3 {
+            position: relative;
+            color: $info;
+            text-align: center;
+            font-size: 1.75rem;
+            font-weight: 400;
+            padding: 25px 0px 35px 0px;
+
+            &:after {
+              content: "\e911";
+              font-family: 'icomoon' !important;
+              font-size: 1rem;
+              position: absolute;
+              left: 50%;
+              top: 0.5em;
+              margin-top: 60px;
+              margin-left: -12px;
+              width: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .service-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2px;
+      background-color: rgba($black, 0.1);
+      height: 10000%;
+      top: 0;
+      right: -$grid-gutter-width/3 * 2 + 1px;
+    }
+
+    .service-item {
+      background-color: $white;
+      margin-bottom: 20px;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+
+      border-radius: 3px;
+      .item-view {
+        padding: 18px 18px 26px 18px;
+        .item-view-center {
+          margin: 20px 0px;
+        }
+        .icon-default {
+          position: relative;
+          color: $primary;
+          margin-right: 10px;
+        }
+        .item-view-bottom {
+          font-size: 0.875rem;
+          display: flex;
+          align-items: center;
+          margin-top: 28px;
+          line-height: 1.1;
+
+          >div{
+            display: flex;
+            align-items: center;
+          }
+
+          img{
+            margin: 0;
+            height: 28px;
+          }
+
+          p{
+            margin-bottom: 0;
+          }
+
+          .view-bottom-left {
+            white-space: nowrap;
+            span {
+              font-size: 0.875rem;
+              font-weight: 500;
+              color: $darker-gray;
+            }
+            .not-required_span,
+            .required_span {
+              font-weight: 500;
+              color: $darker-gray;
+            }
+          }
+          .view-bottom-right {
+            margin-left: 10px;
+            .collect-today {
+              display: block;
+              font-size: 0.875rem;
+              font-weight: 500;
+              color: $darker-gray;
+            }
+            .delivery_span {
+              color: #277fbf;
+              font-size: 0.75rem;
+            }
+            .drop-by_span {
+              font-weight: 500;
+              color: $darker-gray;
+              font-size: 0.875rem;
+              white-space: nowrap;
+            }
+          }
+          * {
+            display: inline-block;
+            position: relative;
+          }
+        }
+      }
+    }
+    .printer-none {
+      .printer-required {
+        display: inline-block !important;
+      }
+      .printer-not-required {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.item-view-head {
+  position: relative;
+  display: flex;
+
+  .company-icon {
+    height: 51px;
+    max-width: 120px;
+    display: flex;
+    vertical-align: top;
+
+    margin-right: 15px;
+  }
+
+  .view-head-right {
+    text-align: left;
+    padding-left: 10px;
+    border-left: 1px solid #d0d0d0;
+
+  }
+  .more-info {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    cursor: pointer;
+    color: $gray-light;
+    width: 20px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .service-list-wrap {
+    .service-list {
+      .service-item {
+        .item-view {
+          .item-view-bottom {
+            font-size: 0.8rem;
+            .view-bottom-left {
+              span {
+                font-size: 0.8rem;
+              }
+            }
+            .view-bottom-right {
+              .collect-today {
+                display: block;
+                font-size: 0.8rem;
+              }
+              .delivery_span {
+                font-size: 0.75rem;
+              }
+              .drop-by_span {
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .service-list-wrap {
+    .service-list-cols {
+      flex-direction: column;
+      justify-content: center;
+
+      .service-list-col {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        .view-bottom-right {
+          img {
+            margin: 7px 12px 0px 12px;
+          }
+        }
+      }
+    }
+    .service-list {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .service-list-wrap {
+    .service-list-cols {
+      .service-list-col {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .service-list-wrap {
+    .service-list-cols {
+      overflow: visible;
+      .service-list-col {
+        width: 100%;
+      }
+    }
+  }
+  .item-view-head {
+    .company-icon {
+      max-width: 90px !important;
+    }
+  }
+
+  .item-view-center {
+    margin: 15px 0px !important;
+  }
+}

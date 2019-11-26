@@ -1,0 +1,63 @@
+.customs-content{
+  .export-wrap{
+    .reasons-export-block {
+      position: relative;
+      cursor: default;
+
+      padding: 20px 15px;
+       .reasons-export-span{
+          color: $label-form;
+          font-weight: 500;
+
+       }
+       .reasons-export-paragraph{
+          color: $label-form;
+          max-width: 75%;
+         input{
+           width: 100%;
+           height: 75px;
+
+         }
+
+      }
+      .tooltip-container{
+        position: absolute;
+        right: 18px;
+        top: 13px;
+        i{
+          cursor: pointer;
+          &:hover{
+            color: $blue-adv;
+
+          }
+          &:focus{
+            color: $blue-adv;
+
+          }
+
+        }
+
+      }
+      input{
+        width: 75%;
+        border-radius: 4px;
+
+      }
+      .cancel-export-block-btn{
+        color: $blue-adv;
+
+      }
+      &:hover{
+        background-color: $gray-7;
+
+      }
+
+    }
+    .export-block-active{
+      background-color: $gray-7;
+
+    }
+
+  }
+
+}

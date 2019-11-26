@@ -1,0 +1,50 @@
+{% extends "structure/_layout-checkout.njk" %}
+
+{% block content %}
+  <header class="header-account" id="main-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="logo-with-progress">
+            <a href="./"><img src="img/ph_logo.svg" alt="parcel-logo" class='logo-img'></a>
+            <div class="progress-tracker absolute-center">
+              <div class="completed">
+                <div><span>1</span><i class="icon-check"></i></div><span>Parcel details</span>
+              </div>
+              <div class="current">
+                <div><span>2</span><i class="icon-check"></i></div><span>Order summary</span>
+              </div>
+              <div>
+                <div><span>3</span><i class="icon-check"></i></div><span>Payment details</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-gray-light pt-g">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="block your-details mb-g">
+            <div class="block-title mb-1">
+              <h4 class="text-medium-subtitle">Your details<i class="icon-help ml-2"></i></h4>
+            </div>
+            <p>We need to know who to contact if any issues occur.</p>
+
+            <div class="your-type">
+              <div class="d-flex">
+                <p>I am the receiver: <span>Peter Jones</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+        <div class="col-lg-4">
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

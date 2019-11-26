@@ -1,0 +1,192 @@
+.insurance-info {
+  border: 2px solid $blue-btn;
+  border-radius: 4px;
+  margin-top: 1rem;
+
+  &.success {
+    border-color: $success;
+
+    .insurance-info-title {
+      background: $success;
+    }
+  }
+
+  .insurance-info-title {
+    font-size: 1.1rem;
+    color: $white;
+    font-weight: 400;
+    background: $blue-btn;
+    line-height: 2.8rem;
+    padding-left: 1.4rem;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 1.4rem;
+      margin-right: 1rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 0.8rem;
+      padding-left: 2rem;
+      &:before {
+        left: 0.3rem;
+      }
+    }
+  }
+  .insurance-content {
+    background: transparent;
+    padding: 1.2rem;
+
+    h5 {
+      margin-bottom: 1.4rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .short-info {
+      font-size: 0.9rem;
+      line-height: 1.2rem;
+    }
+
+    .insurance-variants {
+      padding-right: 4.2rem;
+      @include media-breakpoint-down(sm) {
+        padding-right: 0;
+      }
+      .insurance-item {
+        border: 1px solid $gray-13;
+        border-radius: 4px;
+        display: block;
+        position: relative;
+        padding: 0.8rem 1rem 0 2.8rem;
+        cursor: pointer;
+        transition: all $transition ease;
+
+        div.checked-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s;
+        }
+      
+        .insurance-radio:checked ~ div.checked-content {
+          max-height: 600px;
+        }
+
+        span.checked-content {
+          display: none !important;
+        }
+
+        .insurance-radio:checked ~ span.checked-content {
+          display: block !important;
+        }
+      
+        .insurance-radio:checked ~ .unchecked-content {
+          display: none !important;
+        }
+      
+        .insurance-item-title.checked-content {
+          font-weight: bold;
+        }
+
+        &.checked {
+          border-color: $success;
+          -webkit-box-shadow: 0px 0px 0px 2px $success;
+          -moz-box-shadow: 0px 0px 0px 2px $success;
+          box-shadow: 0px 0px 0px 2px $success;
+        }
+
+        input:checked & {
+          border: 2px solid $green-active;
+        }
+
+        input {
+          position: absolute;
+          left: 0;
+          top: 0;
+          opacity: 0;
+          &:checked ~ .checkmark {
+            border: 3px solid $green-active;
+            &:before {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 11px;
+              height: 11px;
+              background: $green-active;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translateX(-50%) translateY(-50%);
+            }
+          }
+        }
+        .checkmark {
+          display: block;
+          width: 24px;
+          height: 24px;
+          border: 3px solid $black;
+          border-radius: 50%;
+          position: absolute;
+          top: 0.5rem;
+          left: 0.5rem;
+        }
+        span:not(.checkmark) {
+          font-size: 0.9rem;
+          line-height: 1.2rem;
+          display: block;
+          &.insurance-item-title,
+          &.insurance-item-title-additional {
+            margin-bottom: 1rem;
+          }
+          a {
+          }
+        }
+        ul {
+          padding-left: 1rem;
+          li {
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+          }
+        }
+        .restrictions {
+          margin-bottom: 2rem;
+          .restrictions-title {
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+          }
+          .restrictions-list {
+            i {
+              width: 30px;
+              height: 30px;
+              display: inline-block;
+              &:nth-child(1) {
+                background: url("../img/icons/restr-oil-ico.png") 50% 50% no-repeat;
+              }
+              &:nth-child(2) {
+                background: url("../img/icons/restr-bottle-ico.png") 50% 50% no-repeat;
+              }
+              &:nth-child(3) {
+                background: url("../img/icons/restr-charge-ico.png") 50% 50% no-repeat;
+              }
+              &:nth-child(4) {
+                background: url("../img/icons/restr-toxic-ico.png") 50% 50% no-repeat;
+              }
+              &:nth-child(5) {
+                background: url("../img/icons/restr-burn-ico.png") 50% 50% no-repeat;
+              }
+            }
+          }
+          .restrictions-title-additional {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.block {
+  background: #ffffff;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+  
+  .block-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    i {
+      color: $dark-gray;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: color $transition ease;
+
+      &:hover {
+        color: $blue-btn;
+      }
+    }
+
+    h1,h2,h3,h4,h5 {
+      margin: 0;
+    }
+  }
+}

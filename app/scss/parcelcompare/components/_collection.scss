@@ -1,0 +1,145 @@
+.choose-collection {
+  display: none;
+  position: absolute;
+  left: 0;
+  margin-top: 60px;
+  margin-left: 100px;
+  padding: 17px;
+  background-color: $white;
+  z-index: 999;
+  box-shadow: 1px 1px 5px 3px #d9d6d685;
+  border-radius: 4px;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 4px;
+    background-color: $darker-gray;
+  }
+
+  .collection-date-block {
+    border-radius: 3px;
+    border: solid 1px $gray-4;
+    margin-right: 15px;
+    padding: 8px 20px 0px 20px;
+    cursor: pointer;
+    transition: background-color $transition ease;
+
+    &:hover {
+      background-color: $light;
+      color: $primary;
+    }
+
+    &.active {
+      @include active();
+    }
+
+    .date-week {
+      display: block;
+      text-align: center;
+      font-size: 0.75rem;
+      color: $dark-gray;
+    }
+
+    .date-day {
+      display: block;
+      text-align: center;
+      color: #5d6162;
+      font-size: 40px;
+    }
+
+    .date-time {
+      text-align: center;
+      font-size: 1rem;
+      color: #5d6162;
+      padding-bottom: 5px;
+    }
+
+    &:nth-child(4) {
+      color: #cccccc;
+      border: solid 1px $gray-4;
+      .date-day {
+        color: #cccccc;
+      }
+    }
+
+    &:nth-child(5) {
+      color: #cccccc;
+      border: solid 1px $gray-4;
+      .date-day {
+        color: #cccccc;
+      }
+    }
+  }
+
+  .collection-date-block-disabled {
+    @extend .collection-date-block;
+  }
+
+  .collection-time-block {
+    @extend .collection-date-block;
+    padding-bottom: 7px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &.active {
+      -webkit-box-shadow: 0px 0px 0px 2px $primary;
+      -moz-box-shadow: 0px 0px 0px 2px $primary;
+      box-shadow: 0px 0px 0px 2px $primary;
+    }
+  }
+
+  .collection-wrap {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  h5 {
+    font-size: 0.75rem;
+    color: $darker-gray;
+    font-weight: 600;
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-left: 0;
+    width: 100%;
+
+    h5 {
+      text-align: center;
+    }
+
+    .collection-wrap {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .collection-date-block {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 20px 10px 20px;
+        margin: 10px 0px;
+        width: 160px;
+
+        .date-time {
+          font-size: 0.875rem;
+        }
+
+        .date-day {
+          display: inline-block;
+          font-size: 0.9375rem;
+          float: right;
+
+          margin-top: 3px;
+        }
+        .date-week {
+          font-size: 0.9375rem;
+          display: inline-block;
+        }
+      }
+    }
+
+    .collection-time-block {
+      text-align: center;
+    }
+  }
+}

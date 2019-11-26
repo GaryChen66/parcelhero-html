@@ -1,0 +1,130 @@
+.customs-details {
+  .sale-option {
+    display: none;
+
+    &#sale-option-title {
+      label > span {
+        font-size: 15px;
+        color: #999999;
+        padding-left: 5px;
+        font-weight: normal;
+      }
+    }
+  
+    &#sale-option-edit {
+      span {
+        font-size: 14px;
+        color: #5555ff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .personal-gift-option {
+    display: none;
+
+    &-text {
+      display: flex;
+      background-color: rgba(223, 238, 251, 1);
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(97, 172, 235, 1);
+      padding: 1.4rem;
+  
+      .icon-info {
+        line-height: 1.4rem;
+        font-size: 1.2rem;
+        color: #61aceb;
+      }
+    }
+
+    &-warn {
+      background-color: rgba(249, 179, 65, 0.176470588235294);
+      box-sizing: border-box;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgba(249, 179, 65, 1);
+      padding: 1.4rem;
+
+      .info-title {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+
+        .fa-exclamation-triangle {
+          line-height: 1.4rem;
+          font-size: 1.4rem;
+          color: rgba(249, 179, 65, 1);
+        }
+
+      }
+    }
+  }
+
+  #sale-option-editor {
+    width: 100%;
+    display: none;
+    padding: .625rem .75rem;
+  }
+
+  #item-box-list {
+    .item-box {
+      &.hide {
+        .item-header {
+          display: flex;
+          justify-content: space-between;
+
+          .header-underline {
+            margin-bottom: 0 !important;
+            padding-bottom: 0;
+            border: none;
+
+            .item-quantity {
+              display: inline-block;
+            }
+          }
+
+          .item-tool {
+            display: block;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            display: flex;
+            align-items: center;
+
+            img {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .item-details {
+          display: none;
+        }
+      }
+
+      .item-header {
+        .header-underline {
+          .item-quantity {
+            display: none;
+          }
+        }
+
+        .item-tool {
+          display: none;
+        }
+      }
+  
+      .item-details {
+        .quantity-input-block {
+          span.fa-stack {
+            cursor: pointer;
+          }
+        }
+
+        .value-input {
+          padding-right: 0.5rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,216 @@
+header {
+  border-bottom: solid 5px $primary;
+  font-family: $font-family-base;
+  display: flex;
+  align-items: center;
+  min-height: $nav-height;
+
+  &.header-account {
+    border: none;
+    display: block;
+
+    .logo-img {
+      max-width: 400px;
+      margin: 2rem 0;
+      @include media-breakpoint-down(xs) {
+        margin: 0 auto;
+        padding: 1rem;
+        display: block;
+      }
+    }
+  }
+
+
+
+  @include media-breakpoint-down(lg) {
+    .logo-with-progress {
+      text-align: center;
+
+      .logo-img {
+        margin: 1rem auto;
+      }
+  
+      .progress-tracker {
+        margin-bottom: 1rem;
+        &.absolute-center {
+          position: relative;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0px 0px;
+
+    .logo-img {
+      width: 100%;
+      max-width: 370px;
+    }
+  }
+
+
+  .profile-section-wrap {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    @include media-breakpoint-down(sm) {
+      display: none;
+      top: 0;
+      right: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      background: $cover;
+      position: absolute !important;
+      padding: 20px;
+      top: 40px;
+      border-radius: 4px;
+      box-shadow: 1px 1px 5px 0px $gray;
+    }
+
+    & > div {
+      border-right: 1px solid #a4d3da;
+      cursor: pointer;
+    }
+
+    & > div:last-child {
+      border-right: none;
+    }
+  }
+
+  .top-menu-btn {
+    display: none;
+    color: $white;
+    border: none;
+    background-color: transparent;
+    color: #4d69b1;
+    height: 36px;
+    padding: 0 15px;
+    line-height: 36px;
+    position: absolute;
+    background: #fff;
+    margin-right: 1rem;
+    border-radius: 5px;
+
+    i {
+      margin-right: 10px;
+      color: $black;
+      display: block;
+      margin: 0 auto;
+      line-height: 36px;
+    }
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
+    &:focus {
+      color: transparent;
+    }
+  }
+
+  .header-account-sidebar {
+    background: #586996;
+    height: 30px;
+
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
+  }
+
+  .header-home-sidebar {
+    .header-profile-section {
+      > * {
+        margin-right: 1rem;
+        position: relative;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-right: 0em;
+      }
+    }
+  }
+
+  .header-profile-section {
+    display: flex;
+    align-items: center;
+
+    background: #475475;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    > * {
+      margin-left: 1rem;
+    }
+
+    > div {
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      i {
+        color: $white;
+      }
+    }
+
+    .profile-account-name {
+      cursor: pointer;
+    }
+    
+    .tracking-link {
+      top: 1px;
+      height: 36px;
+      color: #4d69b1;
+      padding: 0 35px 0 50px;
+      font-size: 15px;
+      background: #FFF;
+      font-weight: 500;
+      line-height: 38px;
+      position: relative;
+      text-transform: uppercase;
+      border-radius: 0.25rem;
+
+      &::before {
+        bottom: 0;
+        left: 10px;
+        content: '';
+        width: 29px;
+        height: 36px;
+        position: absolute;
+        background: transparent url(/img/parcelcompare/icon_tracking.png) center center no-repeat;
+      }
+
+      &::after {
+        top: 0;
+        right: 10px;
+        content: '';
+        width: 9px;
+        height: 36px;
+        position: absolute;
+        background: transparent url(/img/parcelcompare/icon_right_arrow.png) center center no-repeat;
+      }
+    }
+  }
+
+  .navbar {
+    .nav-item {
+
+      .nav-link {
+        color: #ababab;
+      }
+  
+
+      &.active {
+        .nav-link {
+          font-weight: bold;
+          color: rgb(77, 105, 177);
+        }
+      }
+    }
+  }
+
+  .checkout-header {
+    min-height: $nav-height-2;
+    border-bottom: 0;
+  }
+}

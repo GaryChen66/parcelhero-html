@@ -1,0 +1,30 @@
+.search-widget {
+  position: relative;
+
+  .search-widget-icons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+
+    i {
+      opacity: 0.5;
+      transition: opacity $transition ease;
+      display: none;
+
+      &.active{
+        display: block;
+      }
+
+      &.search-widget-remove {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &:hover {
+    i {
+      opacity: 1;
+    }
+  }
+}

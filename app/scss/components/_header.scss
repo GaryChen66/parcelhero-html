@@ -1,0 +1,188 @@
+header {
+  border-bottom: solid 5px $primary;
+  font-family: $font-family-base;
+  display: flex;
+  align-items: center;
+  min-height: $nav-height;
+  overflow: hidden;
+
+  .logo-img {
+    width: 200px;
+  }
+
+  &.header-account {
+    border: none;
+    display: block;
+
+    .logo-img {
+      width: 250px;
+      margin: 2rem 0;
+      @include media-breakpoint-down(xs) {
+        margin: 0 auto;
+        padding: 1rem;
+        display: block;
+      }
+    }
+  }
+
+
+
+  @include media-breakpoint-down(lg) {
+    .logo-with-progress {
+      text-align: center;
+
+      .logo-img {
+        margin: 1rem auto;
+      }
+  
+      .progress-tracker {
+        margin-bottom: 1rem;
+        &.absolute-center {
+          position: relative;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0px 0px;
+
+    .logo-img {
+      width: 160px;
+    }
+  }
+}
+
+.profile-section-wrap {
+  display: flex;
+  flex-direction: row;
+
+  .profile-section-shop {
+    margin-right: 2em;
+  }
+
+  @include media-breakpoint-down(xs) {
+    display: none;
+    top: 0;
+    right: 0;
+  }
+
+  @include media-breakpoint-down(xs) {
+    background: $cover;
+    position: absolute !important;
+    padding: 20px;
+    top: 40px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px 0px $gray;
+  }
+}
+
+.top-menu-btn {
+  display: none;
+  color: $white;
+  border: none;
+  background-color: transparent;
+
+  i {
+    margin-right: 10px;
+    color: $black;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @include media-breakpoint-down(xs) {
+    display: block;
+  }
+
+  &:focus {
+    color: transparent;
+  }
+}
+
+.profile-section-wrap {
+  display: flex;
+  flex-direction: row;
+  .profile-section-shop {
+    margin-right: 2em;
+  }
+  @include media-breakpoint-down(xs) {
+    display: none;
+    top: 0;
+    right: 0;
+  }
+  @include media-breakpoint-down(xs) {
+    background: $cover;
+    position: absolute !important;
+    padding: 20px;
+    top: 40px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px 0px $gray;
+  }
+}
+
+.top-menu-btn {
+  display: none;
+  color: $white;
+  border: none;
+  background-color: transparent;
+  i {
+    margin-right: 10px;
+    color: $black;
+    display: block;
+    margin: 0 auto;
+  }
+  @include media-breakpoint-down(xs) {
+    display: block;
+  }
+  &:focus {
+    color: transparent;
+  }
+}
+
+.header-account-sidebar {
+  background-color: $cover;
+  padding: 0.5rem 0;
+}
+
+.header-home-sidebar {
+  .header-profile-section {
+    > * {
+      margin-right: 1rem;
+      position: relative;
+    }
+    @include media-breakpoint-down(sm) {
+      margin-right: 0em;
+    }
+  }
+}
+
+.header-profile-section {
+  display: flex;
+  align-items: center;
+
+  > * {
+    margin-left: 1rem;
+  }
+
+  .btn {
+    i {
+      color: $white;
+    }
+  }
+
+  i {
+    color: $gray-2;
+  }
+  .profile-account-name {
+    cursor: pointer;
+    color: $gray-2;
+    i {
+    }
+  }
+}
+
+.checkout-header {
+  min-height: $nav-height-2;
+  border-bottom: 0;
+}

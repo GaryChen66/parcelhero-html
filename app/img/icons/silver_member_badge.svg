@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#D6D6D6" offset="0%"></stop>
+            <stop stop-color="#878787" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Buttons-Copy" transform="translate(-163.000000, -518.000000)">
+            <g id="Group" transform="translate(164.000000, 519.000000)">
+                <circle id="Oval" stroke="#C6C6C6" cx="27" cy="27" r="27"></circle>
+                <g id="security-on" transform="translate(12.000000, 9.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+                    <path d="M29.9179345,5.68145569 C23.737743,5.68145569 19.0030935,3.90868518 14.9994377,0 C10.9961982,3.90868518 6.26175683,5.68145569 0.082085747,5.68145569 C0.082085747,15.8604649 -2.01576119,30.4418263 14.9993336,36.3636364 C32.0156774,30.4419308 29.9179345,15.8605694 29.9179345,5.68145569 Z M13.7636284,23.5937112 L8.79364107,18.6031177 L11.0188889,16.3690757 L13.7636284,19.1254182 L18.9805069,13.8875732 L21.2056506,16.1216152 L13.7636284,23.5937112 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

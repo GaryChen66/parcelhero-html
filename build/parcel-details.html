@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parcelhero Checkout</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+
+
+
+  <header class="header-account" id="main-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="logo-with-progress">
+            <a href="./"><img src="img/ph_logo.svg" alt="parcel-logo" class='logo-img'></a>
+            <div class="progress-tracker absolute-center">
+              <div class="current">
+                <div><span>1</span><i class="icon-check"></i></div><span>Parcel details</span>
+              </div>
+              <div>
+                <div><span>2</span><i class="icon-check"></i></div><span>Order summary</span>
+              </div>
+              <div>
+                <div><span>3</span><i class="icon-check"></i></div><span>Payment details</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-gray-light pt-g">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form action="#">
+            <div class="block parcel-details mb-g">
+              <div class="block-title">
+                <h4 class="text-medium-subtitle">Parcel details</h4><i class="icon-help"></i>
+              </div>
+
+              <label class="text-label" for="">Contents description</label>
+              <div class="d-flex mb-4">
+                <div class="search-input">
+                  <input type="text" data-data="contents" id="parcel-contents" class="form-control not-rounded dark-theme">
+                  <i class="fa fa-caret-down"></i>
+                </div>
+
+                <button class="btn btn-success-neutral d-none"><i class="icon-check"></i>Description saved</button>
+                <button class="btn save-btn ml-md-4 mx-auto disabled" id="parcel-save">Save description</button>
+              </div>
+
+              <div class="d-flex mb-g parcel-details-inputs">
+                <div class="details-input">
+                  <label class="text-label" for="">Reference 1</label>
+                  <input type="text" id="parcel-reference" value="" class="form-control not-rounded dark-theme mb-4">
+
+                  <label class="text-label" for="">Reference 2 <span>Optional</span></label>
+                  <input type="text" id="parcel-reference-o" value="" class="form-control not-rounded dark-theme mb-4">
+
+                  <label class="text-label" for="">Cost centre</label>
+                  <div class="search-input">
+                    <input type="text" data-data="contents" id="parcel-cost-centre" value="" class="form-control not-rounded dark-theme">
+                  </div>
+                </div>
+
+                <button class="btn btn-success-neutral d-none"><i class="icon-check"></i>Cost centre saved</button>
+                <button class="btn save-btn ml-md-4 mx-auto disabled" id="cost-save">Save cost centre</button>
+              </div>
+              
+              <div class="insurance-info">
+                <h5 class="insurance-info-title"><i class="icon-shield-check"></i>You're covered for loss and damage</h5>
+                <div class="insurance-content">
+                  <p>To increase your cover, please enter the shipment value below.</p>
+
+                  <label class="text-label" for="">Parcel value</label>
+                  <div class="d-flex mb-2">
+                    <div>
+                      <input type="text" id="parcel-value" value="£ " class="form-control not-rounded dark-theme">
+                    </div>
+
+                    <button class="btn save-btn ml-md-4 mx-auto" id="calc-cost">Calculate cost</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="insurance-info">
+                <h5 class="insurance-info-title"><i class="icon-shield-check"></i>Full Cover - Recommended Option</h5>
+                <div class="insurance-content">
+                  <p class="short-info">We strongly recommend you cover your shipment for £<span id="parcel-cost-ins"></span> loss or damage for just <b>£<span id="parcel-vat-ins"></span> exc VAT</b></p>
+                  <a data-toggle="collapse" href="#insurance-description-collapser" class="insurance-togler"><i class="icon-info"></i>What is Enhanced cover and what's covered?<i class="arrow fas fa-chevron-down"></i></a>
+                  <div class="insurance-description collapse" id="insurance-description-collapser">
+                    <h5>Our enhanced cover terms</h5>
+                    <p>ParcelHero offers free and enhanced cover. As opposed to an insurance policy, enhanced liability extends our liability in the event of loss/damage.</p>
+                    <p>Although our terms and conditions take precedence over any information presented here, this summarises the terms of our limits of liability and enhanced cover.</p>
+                    <h5>What minimum cover levels does ParcelHero offer?</h5>
+                    <p>ParcelHero offers the following levels of free loss/damage cover:</p>
+                    <ul class="list-check list-sm">
+                      <li>Super economy services – No free cover offered (You can purchase additional cover)</li>
+                      <li>All other services – £50 free cover</li>
+                    </ul>
+                    <h5>What additional cover can you purchase over and above the minimum cover?</h5>
+                    <p>ParcelHero offers enhanced cover up to the following levels:</p>
+                    <ul class="list-check list-sm">
+                      <li> Super economy services – Up to £1,000 cover</li>
+                      <li>All other services – Up to £20,000 cover</li>
+                    </ul>
+                    <p>Please note we can offer cover for higher values, but you need to contact us in advance of shipping to we can review your shipment details and confirm your packaging complies with our packaging criteria.</p>
+                    <h5>Conditions of our free and enhanced cover</h5>
+                    <p>Even when you purchase additional cover from us. You will be unable to claim with us in the following circumstances:</p>
+                    <ul class="list-check list-sm">
+                      <li>1. The product you’re shipping is a Prohibited item or an Compensation exclusion item*</li>
+                      <li>2. There is only damage to the exterior packaging (We do not cover damage to exterior packaging only internal contents)</li>
+                      <li>3. The items have not been safely packaged in accordance with our labelling and packaging criteria</li>
+                      <li>4. When sending watches & jewellery over the value of £500. (Our liability is limited to £500)</li>
+                    </ul>
+                  </div>
+                  <div class="insurance-variants">
+                    <label class="insurance-item">
+                      <input type="radio" class="insurance-radio" name="hi">
+                      <span class="checkmark"></span>
+                      <span class="insurance-item-title">Yes please increase my cover, I've read the <a href="#">compensation exclusion</a> list.</span>
+                      
+                      <div class="checked-content">
+                        <span class="insurance-item-title-additional">Enhanced cover entitles you to claim up to the stated value if your goods are lost or damaged in transit. However in the case of damage, it does not cover:</span>
+                        <ul class="list-check list-sm">
+                          <li>Damage to any exterior packaging, such <br>as suitcase wheels or handles</li>
+                          <li>Goods not packaged in accordance with <br>our labelling and packaging criteria</li>
+                          <li>Goods on our Compensation exclusions item list</li>
+                        </ul>
+                        <div class="restrictions">
+                          <span class="restrictions-title">Prohibited items</span>
+                          <div class="restrictions-list">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                          <span class="restrictions-title-additional">View all <a href="#">prohibited items</a></span>
+                        </div>
+                      </div>
+
+                    </label>
+                    <label class="insurance-item">
+                      <input type="radio" class="insurance-radio" name="hi">
+                      <span class="checkmark"></span>
+                      <span class="insurance-item-title unchecked-content">No thanks, I accept the risk and confirm I'm not sending a <a href="#">compensation exclusion</a> item.</span>
+                      <span class="insurance-item-title checked-content">No thanks, I accept the risk.</span>
+
+                      <div class="checked-content">
+                        <span class="insurance-item-title-additional">If your goods are damaged, you will not be covered for:</span>
+                        <ul class="list-check list-sm">
+                          <li>Damage to any exterior packaging</li>
+                          <li>Goods not packaged in accordance with our <a href="#">labelling and packaging</a> criteria</li>
+                          <li>Goods on our Compensation exclusions item list</li>
+                        </ul>
+                        <div class="restrictions">
+                          <span class="restrictions-title">Prohibited items</span>
+                          <div class="restrictions-list">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                          </div>
+                          <span class="restrictions-title-additional">These items are prohibited from being sent through any of our services. View all <a href="#">prohibited items</a></span>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block parcel-details mb-g">
+              <div class="block-title">
+                <h4 class="text-medium-subtitle">Collection Address</h4><i class="icon-help"></i>
+              </div>
+
+              <div id="parcel-find-adress">
+                <label class="text-label" for="">Find address</label>
+                <div class="search-input">
+                  <input type="text" autocomplete="new-adress" name="collection-adress" data-type="advanced" data-target="#parcel-find-adress-result" data-adv="#parcel-find-adress-adv" data-hide="#parcel-find-adress" data-data="adress" placeholder="Start typing the address" id="parcel-collection-address" class="form-control not-rounded dark-theme">
+                </div>
+              </div>
+
+              <div class="d-none" id="parcel-find-adress-result">
+                <div class="parcel-adress">
+                  <div class="parcel-adress-location">
+                    <div><i class="icon-location"></i></div>
+                    <div>
+                      <div data-result="adress"></div>
+                      <div><span data-result="name"></span> <span data-result="postCode"></span></div>
+                      <div data-result="country"></div>
+                      <div class="link-primary-spec" id="parcel-edit-collection-adress">Edit</div>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="link-primary-spec" id="parcel-collection-serach-new">Search new</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-none" id="parcel-find-adress-adv">
+                <div class="mt-4 mb-4">
+                  <label class="text-label" for="">Company <span class="op-05">Optional</span></label>
+                  <input type="text" name="collection-company" class="form-control w-50 w-md-100 not-rounded dark-theme">
+                </div>
+
+                <div id="parcel-change-collection-date">
+                  Collection scheduled for <strong>Tue, 14 July between 9am to 5pm</strong> <span class="link-primary-spec" id="change-collection-date">Change</span>
+                </div>
+
+                <div class="mt-2 d-none" id="save-collection-date">
+                  <i class="icon-info mr-2"></i>Based on the new collection date you have selected, the revised delivery date is 24th July.
+                </div>
+
+                <div class="mt-4 d-none" id="parcel-choose-collection-date">
+                  <div class="d-flex box-header">
+                    <strong>Choose a collection date</strong> <span class="link-primary-spec" id="cancel-choose-collection-date">Cancel</span>
+                  </div>
+
+                  <p class="mt-3 mb-2">July 2019</p>
+
+                  <div class="d-flex collection-calender mb-4">
+                    <div class="day-box active">
+                      <p class="day-name">Wednesday</p>
+                      <p class="day-num">20</p>
+                    </div>
+  
+                    <div class="day-box">
+                      <p class="day-name">Thursday</p>
+                      <p class="day-num">21</p>
+                    </div>
+
+                    <div class="day-box">
+                      <p class="day-name">Friday</p>
+                      <p class="day-num">22</p>
+                    </div>
+
+                    <div class="day-box">
+                      <p class="day-name">Saturday</p>
+                      <p class="day-num">23</p>
+                    </div>
+
+                    <div class="day-box">
+                      <p class="day-name">Sunday</p>
+                      <p class="day-num">24</p>
+                    </div>
+
+                    <div class="day-box">
+                      <p class="day-name">Monday</p>
+                      <p class="day-num">25</p>
+                    </div>
+
+                    <div class="day-box">
+                      <p class="day-name">Tuesday</p>
+                      <p class="day-num">26</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex collection-time">
+                    <div class="time-box active">
+                      9am - 6pm
+                    </div>
+
+                    <div class="time-box">
+                      12pm - 6pm
+                    </div>
+                  </div>
+                  
+                  <button class="btn btn-blue-adv not-rounded mt-4 pr-5 pl-5 mb-3 pt-2 pb-2 btn-sm" id="set-collection-date">SET COLLECTION DATE</button>
+                </div>
+
+                <div class="link-icon-primary-spec pb-4 mt-4" data-toggle="collapse" data-target="#collapseInstr" aria-expanded="false" aria-controls="collapseInstr">
+                  <i class="toggle-icon-show fas fa-minus-circle"></i><i class="toggle-icon-hide fas fa-plus-circle"></i> Add collection instructions
+                </div>
+                <div class="collapse" id="collapseInstr">
+                  <label class="text-label" for="">Collection instructions <span class="op-05">Optional</span></label>
+                  <textarea type="text" name="collection-instructions" class="form-control not-rounded dark-theme"></textarea>
+                  <div class="text-small-light mt-2">Couriers are not certain to receive these instructions. <a href="#" class="link-primary-spec">Learn more</a></div>
+                </div>
+                
+                <h4 class="mt-2 mb-4">Collection contact details</h4>
+                <label class="text-label" for="">Contact name for collection</label>
+                <input type="text" name="collection-contact-name" class="form-control w-50 w-md-100 not-rounded dark-theme mb-4">
+                <div class="link-icon-primary-spec mb-4" data-toggle="collapse" data-target="#collapseUpd" aria-expanded="false" aria-controls="collapseUpd">
+                  <i class="toggle-icon-show fas fa-minus-circle"></i><i class="toggle-icon-hide fas fa-plus-circle"></i> Add email for tracking updates
+                </div>
+                <div class="collapse" id="collapseUpd">
+                  <label class="text-label" for="">Your e-mail <span class="op-05">Optional</span></label>
+                  <input type="text" name="collection-email" class="form-control not-rounded dark-theme">
+                </div>
+
+                <div class="insurance-info success">
+                  <h5 class="insurance-info-title d-flex justify-content-between">SAVE £2.96 by dropping off your parcel <i class="icon-help"></i></h5>
+                  <div class="insurance-content">
+                    <div class="d-flex">
+                      <div>
+                        <img class="icon-xl mr-3 mt-1" src="./img/icons/ups-square.png" alt="">
+                      </div>
+                      <div class="text-small">
+                        <div>Your nearest UPS off point is:</div>
+                        <div><strong>27 St. Johns Road,</strong></div>
+                        <div>0.3 miles from you <span class="ml-1 link-primary-spec">View on map</span></div>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-4">
+                      <button class="btn btn-outline-success not-rounded strong">DROP OFF MY PARCEL</button>
+                      <div class="ml-4 link-icon-primary-spec small-icon">View more locations <i class="ml-2 fs arrow fas fa-chevron-down"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="block parcel-details mb-g">
+              <div class="block-title">
+                <h4 class="text-medium-subtitle">Delivery Address</h4><i class="icon-help"></i>
+              </div>
+              <div id="parcel-find-dadress">
+                <label class="text-label" for="">Find address</label>
+                <div class="search-input">
+                  <input type="text" autocomplete="new-adress" name="delivery-adress" data-type="advanced" data-target="#parcel-find-dadress-result" data-adv="#parcel-find-dadress-adv" data-hide="#parcel-find-dadress" data-data="adress" placeholder="Start typing the address" id="parcel-collection-daddress" class="form-control not-rounded dark-theme">
+                </div>
+              </div>
+              <div class="d-none" id="parcel-find-dadress-result">
+                <div class="parcel-adress">
+                  <div class="parcel-adress-location">
+                    <div><i class="icon-location"></i></div>
+                    <div>
+                      <div data-result="adress"></div>
+                      <div><span data-result="name"></span> <span data-result="postCode"></span></div>
+                      <div data-result="country"></div>
+                      <div class="link-primary-spec" id="parcel-edit-collection-dadress">Edit</div>
+                    </div>
+                  </div>
+                  <div>
+                    <span class="link-primary-spec" id="parcel-collection-serach-new-d">Search new</span>
+                  </div>
+                </div>
+              </div>
+              <div class="d-none" id="parcel-find-dadress-adv">
+                <div class="mt-4 mb-4">
+                  <label class="text-label" for="">Company <span class="op-05">Optional</span></label>
+                  <input type="text" name="collection-company" class="form-control w-50 w-md-100 not-rounded dark-theme">
+                </div>
+                <div class="link-icon-primary-spec pb-4" data-toggle="collapse" data-target="#collapseInstr" aria-expanded="false" aria-controls="collapseInstr">
+                  <i class="toggle-icon-show fas fa-minus-circle"></i><i class="toggle-icon-hide fas fa-plus-circle"></i> Add delivery instructions
+                </div>
+                <div class="collapse" id="collapseInstr">
+                  <label class="text-label" for="">Delivery instructions <span class="op-05">Optional</span></label>
+                  <textarea type="text" name="collection-instructions" class="form-control not-rounded dark-theme"></textarea>
+                  <div class="text-small-light mt-2 pb-4">Couriers are not certain to receive these instructions. <a href="#" class="link-primary-spec">Learn more</a></div>
+                </div>
+                <h4 class="mt-2 mb-4">Delivery contact details</h4>
+                <label class="text-label" for="">Contact name for delivery</label>
+                <input type="text" name="delivery-contact-name" class="form-control w-50 w-md-100 not-rounded dark-theme mb-4">
+                <label class="text-label" for="">Email for delivery updates <span class="op-05">Optional</span></label>
+                <input type="text" name="delivery-email" class="form-control w-50 w-md-100 not-rounded dark-theme">
+                <div class="text-small-light mt-2 mb-4">An email address will allow for tracking updates and in-transit changes to the delivery.</div>
+                <div class="insurance-info">
+                  <h5 class="insurance-info-title"><i class="icon-intro-1"></i> Enhance your shipment</h5>
+                  <div class="insurance-content">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn btn-additional not-rounded disabled mb-4" href="order-summary.html">Continue to order summary</a>
+          </form>
+        </div>
+        <div class="col-lg-4">
+          <div class="block pt-0 pb-0 mb-3">
+            <div class="collapse-toggler simple disabled enabled-md" data-toggle="collapse" data-target="#collapseDtl" aria-expanded="true" aria-controls="collapseDtl">
+              <h4 class="text-light-subtitle">Parcel details</h4><i class="fas fa-chevron-down d-block d-lg-none"></i>
+            </div>
+            <div class="collapse show" id="collapseDtl">
+              <div class="border-bottom text-gray-darker">
+                <div class="mb-2">1 x 1.5kg, 45cm x 16cm x 12cm</div>
+                <div class="pb-4">To: United Kingdom</div>
+                <div id="parcel-cost" class="text-gray-darker d-none">
+                  <div class="fw-500">Billing summary</div>
+                  <div class="text-small d-flex justify-content-between pt-3 pb-3">
+                    <span>Shipping costs</span>
+                    <span>£<span id="parcel-shiping-cost">12.13</span></span>
+                  </div>
+                  <div class="text-small d-flex justify-content-between pb-3 border-bottom">
+                    <span>VAT</span>
+                    <span>£<span id="parcel-shiping-vat">2.43</span></span>
+                  </div>
+                  <div class="text-dark text-strong-title mb-0 d-flex justify-content-between pt-3 pb-3">
+                    <span>TOTAL</span>
+                    <span>£<span id="parcel-shiping-total">14.56</span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-2 text-right pb-4">
+                <span class="text-tiny mr-2">Pay Securely with</span><img src="./img/icons/payments-methods.png" alt="">
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-block-blue mb-3" id="parcel-login"><i class="icon-login"></i> Book faster: Log in</button>
+
+          <div class="block pt-0 pb-0 mb-3">
+    <div class="collapse-toggler simple disabled enabled-md" data-toggle="collapse" data-target="#collapseInf" aria-expanded="true" aria-controls="collapseInf">
+        <h4 class="text-light-subtitle">Service information</h4><i class="fas fa-chevron-down d-block d-lg-none"></i>
+    </div>
+    <div class="collapse show" id="collapseInf">
+        <div><img class="icon-xl mr-3" src="./img/icons/ups-square.png" alt=""><span class="text-strong">UPS Standard</span></div>
+        <div class="text-small pb-4 pt-4">
+            <div><strong>Service conditions:</strong></div>
+            <div>Max Parcel Length: 270 cm</div>
+            <div>Max Parcel Weight: 70 kg</div>
+            <div>Max Length + Girth: 330 cm</div>
+        </div>
+    </div>
+</div>
+
+          <button class="btn btn-block-blue mb-3"><i class="icon-live-chat"></i>Live help</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<div class="modal-custom not-rounded" id="modal-sign-in">
+    <div class="modal-custom-cover"></div>
+    <div class="modal">
+        <div class="modal-custom-content p-0 scroll-bg-gray-light">
+            <i alt="close button" class="icon-close close-btn"></i>
+            <div class="sign-in">
+                <div>
+                    <h4 class="text-medium-subtitle text-center mb-4">Sign in</h4>
+                    <div class="mb-4 text-small text-gray-darker">Please sign in or register to save your parcel description for future shipments</div>
+                    <form action="sign-in">
+                        <input type="text" name="email" placeholder="Email" value="" class="form-control w-100 not-rounded value-input dark-theme mb-4" required>
+                        <input type="text" name="password" placeholder="Password" value="" class="form-control w-100 not-rounded value-input dark-theme mb-4" required>
+                        <button class="btn btn-primary not-rounded w-100 mb-3" type="submit">SIGN IN</button>
+                    </form>
+                    <div class="border-bottom pb-3 text-center text-small"><a class="link-neutral" href="forgot.html">Forgot password?</a></div>
+                    <div class="text-center pt-4 pb-4 text-small-medium">Login with an existing account</div>
+                    <div class="socials big-squares">
+                        <div class="google-plus"><i class="fab fa-google"></i></div>
+                        <div class="facebook"><i class="fab fa-facebook-f"></i></div>
+                        <div class="lined-in"><i class="fab fa-linkedin-in"></i></div>
+                    </div>
+                </div>
+                <div class="bg-gray-light">
+                    <h4 class="text-medium-subtitle text-center mb-4 text-success-adv">Register</h4>
+                    <div class="mb-4 text-small text-gray-darker mb-4">Join now and you can save even more on your shipping costs.</div>
+                    <ul class="list-secondary mb-4">
+                        <li>Automatic updates</li>
+                        <li>Rewards program</li>
+                        <li>Special offers and more!</li>
+                    </ul>
+                    <button class="btn btn-success-adv not-rounded w-100 mb-3" type="submit">REGISTER NOW</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src='/js/jquery.js'></script>
+<script src="/js/popper.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src='/js/bootstrap-select.js'></script>
+<script src='/js/charts/circleChart.min.js'></script>
+<script src='/js/flatpickr.js'></script>
+<script src='/js/form-anims.js'></script>
+<script src='/js/jquery.ripple.js'></script>
+<script src='/js/app/iefixes.js'></script>
+<script src='/js/app/data.js'></script>
+<script src='/js/app/script.js'></script>
+<script src='/js/app/middle-sidebar.js'></script>
+<script src='/js/app/header.js'></script>
+<script src="/js/app/pages/customs.js"></script>
+<script src="/js/app/modal.js"></script>
+<script src="/js/app/checkboxes.js"></script>
+
+
+<script src='/js/app/pages/parcel-details.js'></script>
+
+
+</body>
+</html>

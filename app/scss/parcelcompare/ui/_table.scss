@@ -1,0 +1,64 @@
+.table {
+  width: 100%;
+  height: auto;
+  overflow-x: auto;
+
+  table{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+
+    th{
+      border-top: none;
+    }
+
+    td{
+      border-top: none;
+      vertical-align: middle;
+      border-bottom: 1px solid $border-color;
+      transition: all $transition ease;
+    }
+
+    tbody{
+      tr{
+        &:hover{
+          td{
+            background-color: $gray-6;
+          }
+
+          .table-actions {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        &.filtered{
+          display: none;
+          &.found{
+            display:table-row;
+          }
+        }
+      }
+    }
+
+    .table-actions {
+      transform: translateY(70%);
+      opacity: 0;
+      transition: all $transition ease;
+      i{
+        margin-left: 1rem;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity $transition ease;
+
+        &:hover{
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .table-select{
+    padding: 1rem $table-cell-padding;
+  }
+}

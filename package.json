@@ -1,0 +1,31 @@
+{
+  "name": "parcelhero-html",
+  "version": "1.0.0",
+  "description": "ParcelHero Checkout",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-nunjucks-render": "^2.2.3"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-pro": "^5.11.2",
+    "bootstrap": "^4.3.1",
+    "bootstrap-select": "^1.13.12",
+    "browser-sync": "^2.26.7",
+    "flatpickr": "^4.6.3",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParcelVision/ParcelHero-Html.git"
+  },
+  "author": "Charles Astwood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ParcelVision/ParcelHero-Html/issues"
+  },
+  "homepage": "https://github.com/ParcelVision/ParcelHero-Html#readme"
+}

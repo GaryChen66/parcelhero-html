@@ -1,0 +1,496 @@
+#filters {
+  position: relative;
+  font-family: $font-family-base;
+  padding-top: 25px;
+
+  @include media-breakpoint-down(sm) {
+    padding-top: 10px;
+  }
+}
+
+.filters-first-row {
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+
+  .filters-found-services {
+    height: 45px;
+    display: flex;
+    align-items: flex-end;
+
+    p {
+      font-size: 1.75rem;
+      font-weight: 300;
+      margin: 0;
+      line-height: 1.75rem;
+    }
+    strong {
+      font-weight: 500;
+      color: $info;
+    }
+    .found-services-email {
+      margin-left: 40px;
+      position: relative;
+      font-size: 0.875rem;
+
+      &::after {
+        content: url(../img/icons/email.png);
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin-top: 1px;
+        margin-left: -25px;
+      }
+    }
+  }
+  .filter-found-sizes {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    background-color: $gray-5;
+    color: $dark-gray;
+    padding: 9px 20px 9px 0;
+    border-radius: 6px;
+    cursor: pointer;
+
+    .found-sizes-dimens {
+      margin-left: 65px;
+      font-size: 1.25rem;
+
+      &:after {
+        content: url(../img/icons/package-icon.png);
+        position: absolute;
+        height: 23px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        left: 20px;
+      }
+    }
+    .found-sizes-edit {
+      margin-left: 30px;
+
+      .btn.btn-primary {
+        color: $white;
+        background-color: $primary-hover;
+        border: none;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: $light-hover;
+        }
+      }
+    }
+    .found-sizes-wrap {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .filters-found-services {
+      flex-direction: column;
+      align-items: flex-start;  
+
+      .found-services-email {
+        margin-left: 25px;
+      }
+    }
+    .filter-found-sizes {
+      margin-top: 30px;
+      .found-sizes-dimens {
+        font-size: 1.15rem;
+        margin-left: 50px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2rem;
+
+    .filter-found-sizes {
+      width: 100%;
+      .found-sizes-wrap{
+        justify-content: space-between;
+        width: 100%;
+      }
+      .found-sizes-dimens {
+        white-space: nowrap;
+       }
+    }
+
+    .filters-found-services {
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .filters-found-services {
+      height: auto;
+
+      p {
+        font-size: 1.3rem;
+      }
+    }
+
+    .filter-found-sizes {
+      margin-top: 10px;
+
+      .found-sizes-dimens {
+        font-size: 0.85rem;
+       }
+    }
+  }
+}
+
+.filters-second-row {
+  padding-bottom: 40px;
+
+  .filter-buttons {
+    .btn-outline-filter {
+      margin-right: 0.6rem;
+      text-align: left;
+    }
+  }
+  .shipment-buttons{
+    display: flex;
+    justify-content: flex-end;
+
+    .btn{
+      text-transform: uppercase;
+    }
+  }
+  .filter-mobile-btn {
+    display: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-bottom: 2rem;
+
+    .filter-buttons {
+      .btn-outline-filter {
+        margin-right: 0.3rem;
+      }
+    }
+
+    .btn-outline-secondary{
+      line-height: 1.1;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .filter-buttons {
+      display: block;
+      height: auto !important;
+      visibility: visible;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+
+    .filter-mobile-btn {
+      display: block !important;
+      margin: 0px;
+    }
+
+    .shipment-buttons{
+      justify-content: space-between;
+      .btn{
+        width: calc(100%/2 - 5px);
+      }
+    }
+
+    #no-printer {
+      margin-top: 0px !important;
+    }
+
+    .filter-buttons {
+      border-radius: 4px;
+      background-color: $gray-6;
+      margin-top: 30px;
+
+      >div{
+        padding: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        >button{
+          width: calc(50% - 7px);
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.options-list {
+  @extend .details-list;
+  width: 100%;
+  position: relative;
+  
+  &::after {
+    top: -7px;
+    right: 80px;
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: 12px solid transparent;
+    border-left: 12px solid $gray-8;
+    transform: rotate(135deg);
+    
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+
+    .upgrade-item {
+      position: relative;
+      color: $dark-gray;
+      background: $white;
+      font-weight: 600;
+      line-height: 32px;
+      margin: 6px 0px;
+      padding: 7px 8px 9px 7px;
+      border-radius: 5px;
+      border: 1px solid #dcdfe7;
+      border-left-width: 10px;
+
+      a {
+        color: #337ab7;
+        font-size: 0.875rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .upgrade-item-icon {
+        width: 28px;
+        position: relative;
+      }
+      * {
+        position: relative;
+        vertical-align: top;
+        display: inline-block;
+      }
+      .upgrade-item-btn {
+        float: right;
+        width: 100px;
+        min-height: 31px;
+        padding: 1px 12px;
+        color: $white;
+        font-size: 0.9375rem;
+        border-radius: 3px;
+        transition: all 0.5s ease;
+        background: url(../img/icons/upgrade-add-icon.png) right 10px center no-repeat;
+        background-color: $blue-light-4;
+        background-size: 20px;
+
+        &:hover{
+          text-decoration: none;
+          background-color: $primary;
+        }
+      }
+      .form-control {
+        display: inline-block;
+        width: 105px;
+        height: 32px;
+        padding: 5px 6px;
+        margin-left: 15px;
+        font-size: 0.75rem;
+        font-weight: 300;
+        border-radius: 3px;
+        background: #f0f1f3;
+      }
+      img {
+        vertical-align: top;
+        margin-top: 2px;
+      }
+      .text-description {
+        display: none;
+        padding: 8px;
+        margin-top: 10px;
+        color: inherit;
+        font-size: 90%;
+        font-weight: 300;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        background: #f5f5f5;
+        border: 1px solid #e2e2e2;
+        border-radius: 4px;
+
+      }
+      .text-description_active {
+        display: block;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+
+    ul{
+      margin-bottom: 0;
+
+      .upgrade-item {
+        margin: 0;
+        margin-bottom: 0.5rem;
+
+        .form-control{
+          margin-left: 0;
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        .upgrade-item-btn{
+          display: block;
+          float:initial;
+          width: 100%;
+        }
+      }
+    }
+
+    &::after{
+      right: auto;
+      left: 20%;
+    }
+  }
+}
+
+.choose-date {
+  display: none;
+  border-top: solid 1px rgba(0, 0, 0, 0.1);
+  padding: 12px 20px 16px 20px;
+  margin-top: -10px;
+  position: relative;
+  @include shadow(0px 4px 4px 0px, 0.1);
+
+  .choose-date-left {
+    display: flex;
+    position: relative;
+
+    .btn {
+      color: $dark-gray;
+      margin-right: 15px;
+
+      .btn-close {
+        display: none;
+        margin-left: 1rem;
+      }
+
+      &.active{
+        font-weight: 500;
+        color: $darker-gray;
+
+        .btn-close {
+          display: block;
+        }
+      }
+
+      input {
+        margin-right: 10px;
+      }
+    }
+
+    .view-drop-btn {
+      display: none;
+
+      &.active{
+        display: block;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 12px 0 16px 0;
+
+    .container{
+      .drop-postcode-left {
+        display: flex;
+        justify-content: space-between;
+  
+        form{
+          width: calc(50% - 5px);
+          margin-right: 0;
+        }
+      }
+      .choose-date-left{
+        display: flex;
+        justify-content: space-between;
+
+        .btn{
+          width: calc(50% - 5px);
+          margin-right: 0;
+        }
+      }
+      .view-drop-btn {
+        width: calc(50% - 5px);
+      }
+    }
+
+    .view-drop-btn{
+      line-height: 1;
+    }
+  }
+
+}
+
+.drop-postcode {
+  @extend .choose-date;
+  padding: 12px 20px 14px 20px;
+  .drop-postcode-left {
+    @extend .choose-date-left;
+
+    .input-postcode {
+      margin-right: 15px;
+    }
+
+    .view-drop-btn {
+      background-color: transparent;
+      border: solid 1px $gray-4;
+      border-radius: 3px;
+
+      color: $dark-gray;
+      font-size: 1rem;
+
+      padding: 5px 14px;
+      img {
+        margin: 0px 7px 0px 0px;
+      }
+      &:hover {
+        color: $primary;
+        border: solid 1px $primary;
+      }
+    }
+    span {
+      font-size: 0.875rem;
+      color: $dark-gray;
+
+      line-height: 46px;
+      margin-right: 15px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 12px 0 16px 0;
+
+    .drop-postcode-left {
+      span {
+        display: none;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .view-drop-btn {
+      img {
+        display: none !important;
+      }
+    }
+  }
+  
+}

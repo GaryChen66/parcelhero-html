@@ -1,0 +1,10 @@
+.search-interactive .search-shipment-menu {
+  justify-content: space-between; }
+  .search-interactive .search-shipment-menu .shipment-menu-block {
+    display: flex;
+    flex-direction: row; }
+  .search-interactive .search-shipment-menu #add-filters-btn {
+    color: #000000;
+    background-color: #ffffff;
+    border: solid 2px #999999;
+    text-transform: uppercase; }

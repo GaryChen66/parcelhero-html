@@ -1,0 +1,34 @@
+.shipment-group {
+  .list-group {
+    &-item{
+      margin-right: 1em;
+      border-radius: 0.4em;
+      padding: 0.75rem 0.75rem;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+      span{
+        color: $label-form;
+        &.text-title-medium{
+          line-height: 0.975em;
+        }
+      } 
+      &:hover{
+        border: solid 1px $label-hover;
+        background-color: $label-hover-bg;
+        span{
+          color: $label-hover;
+        }
+      }
+    }
+    &-item.active-item{
+      border: solid 2px $label-hover;
+      &:hover {
+        background-color: $white;
+      }
+      span{
+        color: $label-hover;
+        font-weight: 500;
+      }
+    }
+  }
+}
